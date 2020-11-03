@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de965f2e710c1c489ead8e62cd25da0, type: 3}
+  m_Name: Env_Canal_Pipe_01 Painting Data
+  m_EditorClassIdentifier: 
+  hullData: {fileID: 11400000, guid: 11a4af8802cdd614b95ceaab31841a24, type: 2}
+  sourceMesh: {fileID: 4300000, guid: c3a9164de1511a649ae99450f2fda82c, type: 3}
+  activeHull: 1
+  faceThickness: 0.1
+  hulls:
+  - name: Hull 1
+    isVisible: 1
+    type: 1
+    colour: {r: 0, g: 1, b: 1, a: 0.3}
+    material: {fileID: 0}
+    enableInflation: 0
+    inflationAmount: 0.01
+    isTrigger: 0
+    isChildCollider: 0
+    selectedFaces: 2600000027000000340000003500000033000000310000002b0000002300000024000000220000002a0000002000000021000000250000002c0000002d0000002f0000002e000000300000003200000029000000280000001a0000001b0000001c0000001d0000001f00000041000000420000003f0000003e0000003b000000390000003700000036000000380000003a0000003c0000003d00000040000000450000004600000047000000490000004b0000004d0000004c0000004a000000480000004400000043000000140000001500000016000000170000001900000018000000120000001300000011000000100000000e0000000f0000000d0000000c0000000b0000000a000000
+    collisionMesh: {fileID: 1779139685931957637, guid: 11a4af8802cdd614b95ceaab31841a24, type: 2}
+    faceCollisionMesh: {fileID: 0}
+    collisionBox:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    hasColliderError: 0
+    numColliderFaces: 10
+  - name: Hull 2
+    isVisible: 1
+    type: 0
+    colour: {r: 1, g: 0, b: 1, a: 0.3}
+    material: {fileID: 0}
+    enableInflation: 0
+    inflationAmount: 0.01
+    isTrigger: 0
+    isChildCollider: 0
+    selectedFaces: 030000000200000008000000000000000100000009000000
+    collisionMesh: {fileID: 0}
+    faceCollisionMesh: {fileID: 0}
+    collisionBox:
+      m_Center: {x: -0.000000029802322, y: -1.4490776, z: 0.5849762}
+      m_Extent: {x: 0.8437381, y: 0.8437381, z: 0.11338806}
+    hasColliderError: 0
+    numColliderFaces: 0

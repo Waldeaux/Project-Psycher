@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de965f2e710c1c489ead8e62cd25da0, type: 3}
+  m_Name: road_LaneTransition_Right Painting Data
+  m_EditorClassIdentifier: 
+  hullData: {fileID: 11400000, guid: 476cdbffd7c5e7f44bd5c70ae7573a0d, type: 2}
+  sourceMesh: {fileID: 4300002, guid: 5b1bf9e75e6e0cf428ec7d8606d61712, type: 3}
+  activeHull: 1
+  faceThickness: 0.1
+  hulls:
+  - name: Hull 1
+    isVisible: 1
+    type: 0
+    colour: {r: 0, g: 1, b: 1, a: 0.3}
+    material: {fileID: 0}
+    enableInflation: 0
+    inflationAmount: 0.01
+    isTrigger: 0
+    isChildCollider: 0
+    selectedFaces: 23000000060000002400000015000000160000001f0000002000000012000000030000000f000000100000001300000014000000210000000700000011000000080000001b0000001c000000220000001e0000001d0000000c0000000b0000000e0000000d000000
+    collisionMesh: {fileID: -1059261353599553347, guid: 476cdbffd7c5e7f44bd5c70ae7573a0d, type: 2}
+    faceCollisionMesh: {fileID: 0}
+    collisionBox:
+      m_Center: {x: -4.9999895, y: -0.19479579, z: 7.0654354}
+      m_Extent: {x: 4.9999895, y: 0, z: 7.0654354}
+    hasColliderError: 0
+    numColliderFaces: 0
+  - name: Hull 2
+    isVisible: 1
+    type: 1
+    colour: {r: 1, g: 0, b: 1, a: 0.3}
+    material: {fileID: 0}
+    enableInflation: 0
+    inflationAmount: 0.01
+    isTrigger: 0
+    isChildCollider: 0
+    selectedFaces: 1700000018000000190000001a0000002b0000002c0000002d0000002e00000028000000270000000400000005000000290000002a00000026000000000000002f00000025000000090000000a0000000100000002000000
+    collisionMesh: {fileID: 3983644531774074399, guid: 476cdbffd7c5e7f44bd5c70ae7573a0d, type: 2}
+    faceCollisionMesh: {fileID: 0}
+    collisionBox:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    hasColliderError: 0
+    numColliderFaces: 9

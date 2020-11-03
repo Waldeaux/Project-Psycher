@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de965f2e710c1c489ead8e62cd25da0, type: 3}
+  m_Name: road_crossing_center_mesh Painting Data
+  m_EditorClassIdentifier: 
+  hullData: {fileID: 11400000, guid: ec67efbe9511c0d4aa94991c63646865, type: 2}
+  sourceMesh: {fileID: 4300000, guid: b9a522a9585cd9a43921fbab44519284, type: 3}
+  activeHull: 0
+  faceThickness: 0.1
+  hulls:
+  - name: Hull 1
+    isVisible: 1
+    type: 0
+    colour: {r: 0, g: 1, b: 1, a: 0.3}
+    material: {fileID: 0}
+    enableInflation: 0
+    inflationAmount: 0.01
+    isTrigger: 0
+    isChildCollider: 0
+    selectedFaces: 01000000020000000b0000000a00000009000000080000000c0000000d000000000000000500000006000000040000000300000007000000
+    collisionMesh: {fileID: 0}
+    faceCollisionMesh: {fileID: 0}
+    collisionBox:
+      m_Center: {x: -2.499995, y: -0.19479577, z: -3.4999998}
+      m_Extent: {x: 2.499995, y: 0, z: 3.4999998}
+    hasColliderError: 0
+    numColliderFaces: 0
