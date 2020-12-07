@@ -1078,6 +1078,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2314136228498115463, guid: 7b3f814096087ac499f0e38340393ee5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314136228498115463, guid: 7b3f814096087ac499f0e38340393ee5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314136228498115463, guid: 7b3f814096087ac499f0e38340393ee5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314136228498115463, guid: 7b3f814096087ac499f0e38340393ee5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314136228498115463, guid: 7b3f814096087ac499f0e38340393ee5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314136228953520844, guid: 7b3f814096087ac499f0e38340393ee5, type: 3}
+      propertyPath: recalibrateSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314136228953520845, guid: 7b3f814096087ac499f0e38340393ee5, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2314136228953520846, guid: 7b3f814096087ac499f0e38340393ee5, type: 3}
       propertyPath: m_Name
       value: Capsule
@@ -1088,7 +1116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2314136228953520848, guid: 7b3f814096087ac499f0e38340393ee5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 50.6
       objectReference: {fileID: 0}
     - target: {fileID: 2314136228953520848, guid: 7b3f814096087ac499f0e38340393ee5, type: 3}
       propertyPath: m_LocalPosition.z
