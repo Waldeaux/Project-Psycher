@@ -48,11 +48,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        MoveCamera();
 
         switch (currentState)
         {
             case (PlayerState.recalibrate):
+                MoveCamera();
                 OneTimeRecalibrate();
                 break;
             default:
@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 upMovement = Vector3.Project(rb.velocity, transform.up) - transform.up * 9.8f * Time.deltaTime;
         rb.velocity = upMovement + planarMovement;
 
-        rb.rotation *= Quaternion.AngleAxis(rotationSpeed * Input.GetAxis("Mouse X"), cam.transform.InverseTransformDirection(transform.up));
+        rb.rotation *= Quaternion.AngleAxis(rotationSpeed * Input.GetAxis("Mouse X"), transform.InverseTransformDirection(transform.up));
 
         cam.transform.rotation *= Quaternion.AngleAxis(rotationSpeed * -Input.GetAxis("Mouse Y"), cam.transform.InverseTransformDirection(cam.transform.right));
         Vector3 cross = Vector3.Cross(cam.transform.forward, rb.transform.forward);
