@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
 
     private PlayerState currentState = PlayerState.normal;
 
+    private Quaternion targetCalibrationRotation;
+
 
     private Vector3 storedVelocity;
 
@@ -47,10 +49,11 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         MoveCamera();
+
         switch (currentState)
         {
             case (PlayerState.recalibrate):
-                Recalibrate();
+                OneTimeRecalibrate();
                 break;
             default:
                 NormalMovement();
@@ -88,8 +91,35 @@ public class PlayerMovement : MonoBehaviour
             currentState = PlayerState.recalibrate;
             camPosition = new Vector3(0,10, 0);
             camRotation = Quaternion.Euler(90, 0, 0);
+            targetCalibrationRotation = transform.rotation;
         }
     }
+
+    private void OneTimeRecalibrate()
+    {
+
+        if (!Input.GetKey(recalibrateKey))
+        {
+            rb.velocity = storedVelocity;
+            currentState = PlayerState.normal;
+            camPosition = Vector3.zero;
+            camRotation = Quaternion.Euler(Vector3.zero);
+            NormalMovement();
+            return;
+        }
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetCalibrationRotation, Mathf.Min(1, (Time.deltaTime * recalibrateSpeed) / Quaternion.Angle(transform.rotation, targetCalibrationRotation)));
+        print(Quaternion.Angle(transform.rotation, targetCalibrationRotation));
+        if(Quaternion.Angle(transform.rotation, targetCalibrationRotation) <= 1)
+        {
+            float verticalInput = Input.GetAxis("Vertical");
+            float horizontalInput = Input.GetAxis("Horizontal");
+            int forwardRotation = (int)(Mathf.Abs(horizontalInput) / horizontalInput) * 90;
+            int rightRotation = -(int)(Mathf.Abs(verticalInput) / verticalInput) * 90;
+            targetCalibrationRotation *= Quaternion.AngleAxis(forwardRotation, transform.InverseTransformDirection(transform.forward));
+            targetCalibrationRotation *= Quaternion.AngleAxis(rightRotation, transform.InverseTransformDirection(transform.right));
+        }
+    }
+
 
     private void Recalibrate()
     {
@@ -104,10 +134,9 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
         Quaternion rotation = Quaternion.AngleAxis(recalibrateSpeed * Input.GetAxis("Vertical") * Time.deltaTime, transform.InverseTransformDirection(transform.right));
-            rotation *= Quaternion.AngleAxis(-recalibrateSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), transform.InverseTransformDirection(transform.forward));
+        rotation *= Quaternion.AngleAxis(-recalibrateSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), transform.InverseTransformDirection(transform.forward));
         transform.rotation *= rotation;
     }
-
     private void MoveCamera()
     {
         Vector3 differenceVector = (camPosition - cam.transform.localPosition);

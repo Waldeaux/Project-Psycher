@@ -1100,7 +1100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2314136228953520844, guid: 7b3f814096087ac499f0e38340393ee5, type: 3}
       propertyPath: recalibrateSpeed
-      value: 100
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 2314136228953520845, guid: 7b3f814096087ac499f0e38340393ee5, type: 3}
       propertyPath: m_UseGravity
