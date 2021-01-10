@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class NetworkPlayerTest : NetworkBehaviour
 {
+    public int connId;
     public List<PlayerData> playerData;
     [SyncVar]
     public long startingTime;
@@ -37,6 +38,7 @@ public class NetworkPlayerTest : NetworkBehaviour
                 playerData.Add(null);
             }
         }
+        //CmdSetKinematic();
     }
 
     // Update is called once per frame
@@ -59,8 +61,8 @@ public class NetworkPlayerTest : NetworkBehaviour
         {
             Vector3 planarMovement = (transform.forward * Input.GetAxis("Vertical") + transform.right * Input.GetAxis("Horizontal"));
             Vector3 upMovement = Vector3.Project(rb.velocity, transform.up) - transform.up * 9.8f * Time.deltaTime;
-            transform.position += (planarMovement * 5 + upMovement)*Time.deltaTime;
-            //rb.velocity = planarMovement * 5 + upMovement;
+            //transform.position += (planarMovement * 5 + upMovement)*Time.deltaTime;
+            rb.velocity = planarMovement * 5 + upMovement;
             //CmdUpdateMovement(planarMovement);
             if (Input.GetKeyDown(KeyCode.R))
             {
@@ -122,8 +124,6 @@ public class NetworkPlayerTest : NetworkBehaviour
             print("frame outside of scope");
             return;
         }
-        print(mostRecentFrame);
-        print(playerFrameData.frame);
         if (mostRecentFrame < playerFrameData.frame)
         {
             int frameDifference = Mathf.Min(playerFrameData.frame - mostRecentFrame,8);
@@ -173,12 +173,31 @@ public class NetworkPlayerTest : NetworkBehaviour
             //CmdSendCurrentFrame(currentFrame,ticks);
             PlayerStruct newPlayerData = new PlayerStruct(rb.position, currentFrame, rb.rotation);
             
-            CmdUpdatePlayerData(newPlayerData);
+            //CmdUpdatePlayerData(newPlayerData);
         }
     }
 
     int CalculateFrame(long tick)
     {
         return (int)(tick / 10000 / 16.667f);
+    }
+
+    [Command]
+    void CmdSetKinematic()
+    {
+        RpcSetKinematic();
+    }
+
+    [ClientRpc]
+    public void RpcSetKinematic()
+    {
+        if (!hasAuthority)
+        {
+            Rigidbody rb = GetComponent<Rigidbody>();
+            if (rb)
+            {
+                rb.isKinematic = true;
+            }
+        }
     }
 }
