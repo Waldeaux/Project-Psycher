@@ -15,6 +15,10 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 camPosition;
     private Quaternion camRotation;
 
+    public bool relativeVelocity;
+
+    public bool easeRecalibrate;
+
     KeyCode recalibrateKey = KeyCode.H;
 
     private enum PlayerState { 
@@ -86,29 +90,44 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKeyDown(recalibrateKey))
         {
-            storedVelocity = rb.velocity;
-            rb.velocity = Vector3.zero;
-            currentState = PlayerState.recalibrate;
-            camPosition = new Vector3(0,10, 0);
-            camRotation = Quaternion.Euler(90, 0, 0);
-            targetCalibrationRotation = transform.rotation;
+            SwitchToRecalibrate();
         }
     }
 
+    private void SwitchToNormal()
+    {
+        rb.velocity = storedVelocity;
+        currentState = PlayerState.normal;
+        camPosition = Vector3.zero;
+        camRotation = Quaternion.Euler(Vector3.zero);
+        NormalMovement();
+    }
+
+    private void SwitchToRecalibrate()
+    {
+        storedVelocity = rb.velocity;
+        rb.velocity = Vector3.zero;
+        camPosition = new Vector3(0, 10, 0);
+        camRotation = Quaternion.Euler(90, 0, 0);
+        targetCalibrationRotation = transform.rotation;
+
+        currentState = PlayerState.recalibrate;
+    }
     private void OneTimeRecalibrate()
     {
-
         if (!Input.GetKey(recalibrateKey))
         {
-            rb.velocity = storedVelocity;
-            currentState = PlayerState.normal;
-            camPosition = Vector3.zero;
-            camRotation = Quaternion.Euler(Vector3.zero);
-            NormalMovement();
+            SwitchToNormal();
             return;
         }
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetCalibrationRotation, Mathf.Min(1, (Time.deltaTime * recalibrateSpeed) / Quaternion.Angle(transform.rotation, targetCalibrationRotation)));
-        print(Quaternion.Angle(transform.rotation, targetCalibrationRotation));
+        if (easeRecalibrate)
+        {
+            EaseRecalibrationRotation();
+        }
+        else
+        {
+            ConstantRecalibrationRotation();
+        }
         if(Quaternion.Angle(transform.rotation, targetCalibrationRotation) <= 1)
         {
             float verticalInput = Input.GetAxis("Vertical");
@@ -121,9 +140,17 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
+    private void ConstantRecalibrationRotation()
+    {
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetCalibrationRotation, Mathf.Min(1, (Time.deltaTime * recalibrateSpeed) / Quaternion.Angle(transform.rotation, targetCalibrationRotation)));
+    }
+
+    private void EaseRecalibrationRotation()
+    {
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetCalibrationRotation, Mathf.Min(Time.deltaTime * 10, 1));
+    }
     private void Recalibrate()
     {
-
         if (!Input.GetKey(recalibrateKey))
         {
             rb.velocity = storedVelocity;
