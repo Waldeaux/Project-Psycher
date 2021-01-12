@@ -8,11 +8,13 @@ public class Matchmaking : MonoBehaviour
 {
     ScrapperNetworkManager networkManager;
     Callback<GameLobbyJoinRequested_t> lobbyJoinCallback;
+    Callback<GameOverlayActivated_t> overlayCallback;
     // Start is called before the first frame update
     void Start()
     {
         networkManager = GetComponent<ScrapperNetworkManager>();
         lobbyJoinCallback = Callback<GameLobbyJoinRequested_t>.Create(JoinLobby);
+        overlayCallback = Callback<GameOverlayActivated_t>.Create(LogOverlay);
     }
 
     // Update is called once per frame
@@ -20,6 +22,10 @@ public class Matchmaking : MonoBehaviour
     {
     }
 
+    void LogOverlay(GameOverlayActivated_t callback)
+    {
+        Debug.Log("overlay");
+    }
     void JoinLobby(GameLobbyJoinRequested_t joinRequest)
     {
         uint ip;
@@ -37,5 +43,11 @@ public class Matchmaking : MonoBehaviour
                 networkManager.StartClient(uri.Uri);
             }
         }
+    }
+
+    public void CreateLobby()
+    {
+        SteamMatchmaking.CreateLobby(ELobbyType.k_ELobbyTypeFriendsOnly, 2);
+        networkManager.StartHost();
     }
 }
