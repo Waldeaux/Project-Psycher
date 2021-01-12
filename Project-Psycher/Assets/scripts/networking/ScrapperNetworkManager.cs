@@ -14,6 +14,7 @@ public class ScrapperNetworkManager : NetworkManager
         base.Start();
         startingTick = DateTime.Now.Ticks;
         players = new List<NetworkPlayerTest>();
+        
     }
     public override void OnServerAddPlayer(NetworkConnection conn)
     {

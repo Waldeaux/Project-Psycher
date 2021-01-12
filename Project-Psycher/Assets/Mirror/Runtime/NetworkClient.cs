@@ -70,6 +70,7 @@ namespace Mirror
             InitializeTransportHandlers();
 
             connectState = ConnectState.Connecting;
+            Debug.Log(address);
             Transport.activeTransport.ClientConnect(address);
 
             // setup all the handlers

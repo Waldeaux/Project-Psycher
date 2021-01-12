@@ -398,6 +398,7 @@ namespace Mirror
             }
             if (logger.LogEnabled()) logger.Log("NetworkManager StartClient address:" + networkAddress);
 
+            print(networkAddress);
             NetworkClient.Connect(networkAddress);
 
             OnStartClient();
@@ -412,6 +413,7 @@ namespace Mirror
         {
             mode = NetworkManagerMode.ClientOnly;
 
+            print(uri.Host);
             InitializeSingleton();
 
             if (authenticator != null)
