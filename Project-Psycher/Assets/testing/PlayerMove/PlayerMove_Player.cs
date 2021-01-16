@@ -5,13 +5,12 @@ public class PlayerMove_Player : MonoBehaviour
     Rigidbody rb;
     public float maxSpeed;
     Vector3 internalVelocity;
-    float timer = 0;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         internalVelocity = Vector3.zero;
-        rb.velocity = transform.right * 20;
+        //rb.velocity = transform.right * 20;
     }
 
     // Update is called once per frame
@@ -25,6 +24,7 @@ public class PlayerMove_Player : MonoBehaviour
         //Get velocity relative to movement plane
         Vector3 planarMovement = Vector3.ProjectOnPlane(rb.velocity, transform.up);
 
+        Vector3 upVelocity = rb.velocity - planarMovement;
 
         Vector3 externalVelocity = planarMovement - internalVelocity;
 
@@ -72,10 +72,9 @@ public class PlayerMove_Player : MonoBehaviour
             appliedAccelerationVector = moveVector;
             internalVelocity = moveVector;
         }
-        rb.velocity = (appliedAccelerationVector);
-        timer += Time.deltaTime;
-        print(timer);
-        print(rb.velocity);
+        print(upVelocity);
+        print(appliedAccelerationVector);
+        rb.velocity = (appliedAccelerationVector + upVelocity);
     }
 
     bool GreaterThanOrEqualTo(Vector3 comparer, Vector3 comparee)

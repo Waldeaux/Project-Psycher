@@ -9,8 +9,15 @@ public class SteamName : MonoBehaviour
 
     void Start()
     {
-        Text text = GetComponent<Text>();
-        text.text = SteamFriends.GetPersonaName();
+        if (SteamManager.Initialized)
+        {
+            Text text = GetComponent<Text>();
+            text.text = SteamFriends.GetPersonaName();
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 
 }

@@ -9,12 +9,16 @@ public class ScrapperNetworkManager : NetworkManager
     long startingTick;
     List<NetworkPlayerTest> players;
     public ScrapperLobby lobby;
+    public NetworkManagerHUD networkManagerHUD;
     public override void Start()
     {
         base.Start();
         startingTick = DateTime.Now.Ticks;
         players = new List<NetworkPlayerTest>();
-        
+        if (!SteamManager.Initialized)
+        {
+            networkManagerHUD.enabled = true;
+        }
     }
     public override void OnServerAddPlayer(NetworkConnection conn)
     {

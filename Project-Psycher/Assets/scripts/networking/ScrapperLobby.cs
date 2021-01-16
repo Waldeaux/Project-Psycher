@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using Mirror;
+using Steamworks;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScrapperLobby : MonoBehaviour
+public class ScrapperLobby : NetworkBehaviour
 {
     public GameObject entryObject;
+    public Matchmaking matchmaking;
     List<PlayerLobbyEntry> entries;
     private void Start()
     {
@@ -14,17 +17,25 @@ public class ScrapperLobby : MonoBehaviour
     public void AddUser(int connId)
     {
         GameObject entryInst = GameObject.Instantiate(entryObject);
+        NetworkServer.Spawn(entryInst);
         PlayerLobbyEntry entryScript = entryInst.GetComponent<PlayerLobbyEntry>();
-        print(entryScript);
-        entryInst.transform.SetParent(this.transform);
         entries.Add(entryScript);
-        RectTransform rt = entryInst.GetComponent<RectTransform>();
-        rt.anchorMax = new Vector2(1, 1.125f - (entries.Count) * .125f);
-        rt.anchorMin = new Vector2(0, 1 - (entries.Count) * .125f);
-        rt.offsetMin = Vector2.zero;
-        rt.offsetMax = Vector2.zero;
         entryScript.connId = connId;
+        string newPlayerName = "";
+        if (matchmaking.currentLobby.IsValid())
+        {
+            //Get new player's name
+            int numPlayers = SteamMatchmaking.GetNumLobbyMembers(matchmaking.currentLobby);
+            CSteamID newPlayer = SteamMatchmaking.GetLobbyMemberByIndex(matchmaking.currentLobby, numPlayers - 1);
+            newPlayerName = SteamFriends.GetFriendPersonaName(newPlayer);
+        }
+        else
+        {
+            newPlayerName = "Player " + (entries.Count);
+        }
+        entryScript.UpdateText(gameObject.name, entries.Count, newPlayerName);
     }
+
 
     public void RemoveUser(int connId)
     {
@@ -50,9 +61,9 @@ public class ScrapperLobby : MonoBehaviour
         int index = 0;
         foreach(PlayerLobbyEntry entry in entries)
         {
-            RectTransform rt = entry.GetComponent<RectTransform>();
-            rt.anchorMax = new Vector2(1, 1.125f - (entries.Count) * .125f);
-            rt.anchorMin = new Vector2(0, 1 - (entries.Count) * .125f);
+            string playerName = "Player " + (index + 1);
+            entry.UpdateText(gameObject.name, index, playerName);
+            index++;
         }
     }
 

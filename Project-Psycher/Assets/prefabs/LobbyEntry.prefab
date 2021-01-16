@@ -91,6 +91,8 @@ GameObject:
   - component: {fileID: 6356042357113788289}
   - component: {fileID: 6356042357113788294}
   - component: {fileID: 6540283686968953790}
+  - component: {fileID: 9125614654594175500}
+  - component: {fileID: 649441482687976528}
   m_Layer: 5
   m_Name: LobbyEntry
   m_TagString: Untagged
@@ -169,3 +171,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connId: 0
+  text: {fileID: 6356042357037133439}
+  nUI: {fileID: 649441482687976528}
+--- !u!114 &9125614654594175500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6356042357113788292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
+--- !u!114 &649441482687976528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6356042357113788292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea25b03e8ab925349a7645c9e54f8360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  parentName: 
+  count: 0
+  text: 
+  textComponent: {fileID: 6356042357037133439}
