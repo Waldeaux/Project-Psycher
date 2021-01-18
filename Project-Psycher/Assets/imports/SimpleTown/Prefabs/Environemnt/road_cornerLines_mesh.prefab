@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5288951016474747037}
   - component: {fileID: 8571658879418436842}
   - component: {fileID: 8190374703108243804}
-  - component: {fileID: 3965715924979990472}
   m_Layer: 0
   m_Name: road_cornerLines_mesh
   m_TagString: Untagged
@@ -125,19 +124,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.8691237, y: 0.19479579, z: 2.8691282}
   m_Center: {x: -1.434559, y: -0.09739789, z: -1.4345641}
---- !u!65 &3965715924979990472
+--- !u!65 &8711504593374408337
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100000}
+  m_GameObject: {fileID: 3300947091306207505}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 16.834663, y: 0, z: 17.13087}
-  m_Center: {x: -8.417328, y: -0.19479579, z: -8.565437}
+  m_Size: {x: 0.19999993, y: 0.0040000333, z: 0.19999999}
+  m_Center: {x: -0.09999992, y: -0.0039479416, z: -0.099999994}
 --- !u!1001 &6904579250373911056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -195,6 +194,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a99aaf9417b3ce44ba52ad53dfdaecb, type: 3}
+--- !u!1 &3300947091306207505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8223203332974164737, guid: 5a99aaf9417b3ce44ba52ad53dfdaecb, type: 3}
+  m_PrefabInstance: {fileID: 6904579250373911056}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2775485448634106795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8743034372552909243, guid: 5a99aaf9417b3ce44ba52ad53dfdaecb, type: 3}

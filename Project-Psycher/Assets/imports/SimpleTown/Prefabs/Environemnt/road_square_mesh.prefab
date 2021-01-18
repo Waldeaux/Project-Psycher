@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 400000}
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
-  - component: {fileID: 8356922431179985195}
   m_Layer: 0
   m_Name: road_square_mesh
   m_TagString: Untagged
@@ -83,19 +82,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8356922431179985195
+--- !u!114 &7420298159548365892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7483406600658782099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86df15996814cff45aed711a3ccf2a0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintingData: {fileID: 11400000, guid: 5a8af332e80376a44bb4338097466e6b, type: 2}
+  hullData: {fileID: 11400000, guid: 15156db57e4987047ad633d2a6c402df, type: 2}
+--- !u!65 &4423362993843688450
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100000}
+  m_GameObject: {fileID: 7483406600658782099}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 0, z: 5}
-  m_Center: {x: -2.5, y: 0, z: -2.5}
+  m_Size: {x: 0.19999976, y: 0.0040000677, z: 0.19999976}
+  m_Center: {x: -0.09999976, y: -0.032, z: -0.09999988}
 --- !u!1001 &5110283083406033973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -165,6 +178,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d4d07b11e87b1b43882fa19c6b2b7ce, type: 3}
+--- !u!1 &7483406600658782099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2391756391591068582, guid: 9d4d07b11e87b1b43882fa19c6b2b7ce, type: 3}
+  m_PrefabInstance: {fileID: 5110283083406033973}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7823234186426506537 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3061015531864594716, guid: 9d4d07b11e87b1b43882fa19c6b2b7ce, type: 3}

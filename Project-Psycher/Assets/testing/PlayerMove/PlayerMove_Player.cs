@@ -72,8 +72,6 @@ public class PlayerMove_Player : MonoBehaviour
             appliedAccelerationVector = moveVector;
             internalVelocity = moveVector;
         }
-        print(upVelocity);
-        print(appliedAccelerationVector);
         rb.velocity = (appliedAccelerationVector + upVelocity);
     }
 

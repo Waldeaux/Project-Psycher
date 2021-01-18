@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de965f2e710c1c489ead8e62cd25da0, type: 3}
+  m_Name: seawall_corner_03 Painting Data
+  m_EditorClassIdentifier: 
+  hullData: {fileID: 11400000, guid: 49dfd15136daea447a21b78426511b00, type: 2}
+  sourceMesh: {fileID: -3796887150266652070, guid: 510915396d9497e4e9603e6083bef0e0, type: 3}
+  activeHull: 1
+  faceThickness: 0.1
+  hulls:
+  - name: Hull 1
+    isVisible: 1
+    type: 0
+    colour: {r: 0, g: 1, b: 1, a: 0.3}
+    material: {fileID: 0}
+    enableInflation: 0
+    inflationAmount: 0.01
+    isTrigger: 0
+    isChildCollider: 0
+    selectedFaces: 00000000010000000300000002000000
+    collisionMesh: {fileID: -4138951048797405016, guid: 49dfd15136daea447a21b78426511b00, type: 2}
+    faceCollisionMesh: {fileID: 0}
+    collisionBox:
+      m_Center: {x: -0.099999994, y: -0.03199998, z: -0.09999999}
+      m_Extent: {x: 0.099999994, y: 0.0020000162, z: 0.1}
+    hasColliderError: 0
+    numColliderFaces: 6
+  - name: Hull 2
+    isVisible: 1
+    type: 0
+    colour: {r: 1, g: 0, b: 1, a: 0.3}
+    material: {fileID: 0}
+    enableInflation: 0
+    inflationAmount: 0.01
+    isTrigger: 0
+    isChildCollider: 0
+    selectedFaces: 0d0000000c0000000b0000000a000000
+    collisionMesh: {fileID: 0}
+    faceCollisionMesh: {fileID: 0}
+    collisionBox:
+      m_Center: {x: -0.005506404, y: -0.014999996, z: -0.005506405}
+      m_Extent: {x: 0.005506408, y: 0.014999996, z: 0.005506406}
+    hasColliderError: 0
+    numColliderFaces: 0

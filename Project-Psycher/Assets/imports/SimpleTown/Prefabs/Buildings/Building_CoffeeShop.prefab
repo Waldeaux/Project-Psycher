@@ -81,6 +81,7 @@ GameObject:
   - component: {fileID: 2251510573788796117}
   - component: {fileID: 7337163521997606305}
   - component: {fileID: 7699612585884074387}
+  - component: {fileID: 712670427}
   m_Layer: 0
   m_Name: Building_CoffeeShop
   m_TagString: Untagged
@@ -1070,6 +1071,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0, y: 10.110078, z: 8.885872}
   m_Center: {x: 4.9554276, y: 5.388476, z: 1.7442322}
+--- !u!54 &712670427
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  serializedVersion: 2
+  m_Mass: 5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &3325914653434867978
 PrefabInstance:
   m_ObjectHideFlags: 0

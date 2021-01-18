@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 3306874427174215827}
   - component: {fileID: 7100642894167910555}
   - component: {fileID: 7578167215001629984}
+  - component: {fileID: 5290346433034330434}
   m_Layer: 0
   m_Name: Building_OfficeMedium_Grey
   m_TagString: Untagged
@@ -516,6 +517,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12.829796, y: 1.7997084, z: 12.906193}
   m_Center: {x: 0.0000038146973, y: 5.943484, z: 0.7347698}
+--- !u!54 &5290346433034330434
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &4511798623071111921
 PrefabInstance:
   m_ObjectHideFlags: 0

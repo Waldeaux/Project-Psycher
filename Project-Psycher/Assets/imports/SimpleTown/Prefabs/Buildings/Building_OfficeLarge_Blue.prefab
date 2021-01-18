@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 6113737897563623735}
   - component: {fileID: 1673295690032581783}
   - component: {fileID: 2214135118115806433}
+  - component: {fileID: 6783953511967045656}
   m_Layer: 0
   m_Name: Building_OfficeLarge_Blue
   m_TagString: Untagged
@@ -558,6 +559,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.281126, y: 0.85834885, z: 1.0554657}
   m_Center: {x: 4.1696043, y: 26.807867, z: -4.07971}
+--- !u!54 &6783953511967045656
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &6361112816298264527
 PrefabInstance:
   m_ObjectHideFlags: 0

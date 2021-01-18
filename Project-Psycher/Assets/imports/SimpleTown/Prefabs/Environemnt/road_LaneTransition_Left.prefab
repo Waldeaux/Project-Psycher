@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 400000}
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
-  - component: {fileID: 1881343660569200600}
   - component: {fileID: 4822029313230719758}
   m_Layer: 0
   m_Name: road_LaneTransition_Left
@@ -84,20 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1881343660569200600
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100000}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 7971216185536546647, guid: 0f9dab47ebec9344fbc1807fd8b4ee5e, type: 2}
 --- !u!64 &4822029313230719758
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -112,6 +97,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1233682537265800525, guid: 0f9dab47ebec9344fbc1807fd8b4ee5e, type: 2}
+--- !u!114 &5976773709584478640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459097923852562947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86df15996814cff45aed711a3ccf2a0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintingData: {fileID: 11400000, guid: cb96c60402575694890e36263530a02b, type: 2}
+  hullData: {fileID: 11400000, guid: 8e46f1b66e1a5ca408929434ecad2253, type: 2}
+--- !u!65 &255559748784708811
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459097923852562947}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.099999785, y: 0.0040000277, z: 0.17}
+  m_Center: {x: -0.049999893, y: -0.0020000138, z: -0.085}
 --- !u!1001 &8093485165452561720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -169,6 +181,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28efa076e3d2358469ec0461573403a3, type: 3}
+--- !u!1 &459097923852562947 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8506981668369235771, guid: 28efa076e3d2358469ec0461573403a3, type: 3}
+  m_PrefabInstance: {fileID: 8093485165452561720}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &942619622927607993 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9026636893732218241, guid: 28efa076e3d2358469ec0461573403a3, type: 3}
