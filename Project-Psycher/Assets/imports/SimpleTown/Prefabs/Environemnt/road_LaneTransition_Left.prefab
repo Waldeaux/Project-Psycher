@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
   - component: {fileID: 4822029313230719758}
+  - component: {fileID: -560956527205280905}
   m_Layer: 0
   m_Name: road_LaneTransition_Left
   m_TagString: Untagged
@@ -97,6 +98,35 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1233682537265800525, guid: 0f9dab47ebec9344fbc1807fd8b4ee5e, type: 2}
+--- !u!54 &-560956527205280905
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &255559748784708811
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459097923852562947}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.099999785, y: 0.0040000277, z: 0.17}
+  m_Center: {x: -0.049999893, y: -0.0020000138, z: -0.085}
 --- !u!114 &5976773709584478640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,19 +141,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paintingData: {fileID: 11400000, guid: cb96c60402575694890e36263530a02b, type: 2}
   hullData: {fileID: 11400000, guid: 8e46f1b66e1a5ca408929434ecad2253, type: 2}
---- !u!65 &255559748784708811
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459097923852562947}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.099999785, y: 0.0040000277, z: 0.17}
-  m_Center: {x: -0.049999893, y: -0.0020000138, z: -0.085}
 --- !u!1001 &8093485165452561720
 PrefabInstance:
   m_ObjectHideFlags: 0

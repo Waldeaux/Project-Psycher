@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 5910333741056792961}
   - component: {fileID: 181124394157904448}
   - component: {fileID: 4198242942584770414}
+  - component: {fileID: 7883252949060973238}
   m_Layer: 0
   m_Name: Env_Rocks_01
   m_TagString: Untagged
@@ -217,6 +218,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2953676981454888304, guid: 812472cc9366c004da92bdbb9f08559e, type: 2}
+--- !u!54 &7883252949060973238
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &2229067440236701225
 PrefabInstance:
   m_ObjectHideFlags: 0

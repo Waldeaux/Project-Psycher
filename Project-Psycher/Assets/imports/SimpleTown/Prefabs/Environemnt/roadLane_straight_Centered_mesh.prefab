@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 400000}
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
+  - component: {fileID: -5922527401224148736}
   m_Layer: 0
   m_Name: roadLane_straight_Centered_mesh
   m_TagString: Untagged
@@ -83,6 +84,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &-5922527401224148736
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &6355134424851711399
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6873243053744996342}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.19999976, y: 0.004000034, z: 0.19999978}
+  m_Center: {x: -0.09999976, y: -0.031999983, z: -0.099999875}
 --- !u!114 &1516930655090369508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,19 +127,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paintingData: {fileID: 11400000, guid: f934d7583c2ed3943a3f98505c9b5e47, type: 2}
   hullData: {fileID: 11400000, guid: b2366f67fdbfb5e418a9e9b0dee29287, type: 2}
---- !u!65 &6355134424851711399
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6873243053744996342}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.19999976, y: 0.004000034, z: 0.19999978}
-  m_Center: {x: -0.09999976, y: -0.031999983, z: -0.099999875}
 --- !u!1001 &9102781862923369552
 PrefabInstance:
   m_ObjectHideFlags: 0
