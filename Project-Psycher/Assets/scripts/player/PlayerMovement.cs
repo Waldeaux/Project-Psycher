@@ -63,6 +63,37 @@ public class PlayerMovement : MonoBehaviour
                 NormalMovement();
                 break;
         }
+        Vector3 newPosition = transform.position;
+        if (transform.position.y <= -100)
+        {
+            newPosition.y += 200;
+        }
+        else if (transform.position.y >= 100)
+        {
+            newPosition.y -= 200;
+        }
+        if (transform.position.x <= -100)
+        {
+            newPosition.x += 200;
+        }
+        else if (transform.position.x >= 100)
+        {
+            newPosition.x -= 200;
+        }
+        if (transform.position.z <= -200)
+        {
+            newPosition.z += 400;
+        }
+        else if (transform.position.z >= 200)
+        {
+            newPosition.z -= 400;
+        }
+        transform.position = newPosition;
+    }
+    private void FixedUpdate()
+    {
+
+
     }
 
     private void NormalMovement()
