@@ -5,6 +5,8 @@ using UnityEngine;
 public class PortalCamera : MainCamera
 {
     private int layerMask;
+    public GameObject followTarget;
+    public Vector3 followOffset;
 
     public void Awake()
     {

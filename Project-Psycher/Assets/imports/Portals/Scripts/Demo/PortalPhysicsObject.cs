@@ -15,5 +15,6 @@ public class PortalPhysicsObject : PortalTraveller {
         base.Teleport (fromPortal, toPortal, pos, rot);
         rigidbody.velocity = toPortal.TransformVector (fromPortal.InverseTransformVector (rigidbody.velocity));
         rigidbody.angularVelocity = toPortal.TransformVector (fromPortal.InverseTransformVector (rigidbody.angularVelocity));
+        rigidbody.velocity = -transform.up * 20;
     }
 }

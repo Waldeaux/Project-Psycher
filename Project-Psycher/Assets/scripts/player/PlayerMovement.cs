@@ -63,6 +63,17 @@ public class PlayerMovement : MonoBehaviour
                 NormalMovement();
                 break;
         }
+        //BoundPosition();
+    }
+    private void FixedUpdate()
+    {
+
+
+    }
+
+    private void BoundPosition()
+    {
+
         Vector3 newPosition = transform.position;
         if (transform.position.y <= -100)
         {
@@ -89,11 +100,6 @@ public class PlayerMovement : MonoBehaviour
             newPosition.z -= 400;
         }
         transform.position = newPosition;
-    }
-    private void FixedUpdate()
-    {
-
-
     }
 
     private void NormalMovement()

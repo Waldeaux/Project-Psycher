@@ -4,8 +4,6 @@ using UnityEngine;
 public class MainCamera : MonoBehaviour {
 
     protected List<Portal> portals;
-    public GameObject followTarget;
-    public Vector3 followOffset;
     void Awake () {
         portals = new List<Portal>(FindObjectsOfType<Portal>());
     }
