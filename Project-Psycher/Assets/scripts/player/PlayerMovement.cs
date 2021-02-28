@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public bool easeRecalibrate;
 
     KeyCode recalibrateKey = KeyCode.H;
+    KeyCode jumpKey = KeyCode.Space;
 
     private enum PlayerState { 
         normal,
@@ -29,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     private PlayerState currentState = PlayerState.normal;
 
     private Quaternion targetCalibrationRotation;
+
+    private Vector3 jumpCastExtents = new Vector3(.77f, .1f, .77f);
 
 
     private Vector3 storedVelocity;
@@ -63,43 +66,13 @@ public class PlayerMovement : MonoBehaviour
                 NormalMovement();
                 break;
         }
-        //BoundPosition();
     }
     private void FixedUpdate()
     {
-
-
-    }
-
-    private void BoundPosition()
-    {
-
-        Vector3 newPosition = transform.position;
-        if (transform.position.y <= -100)
+        if (Input.GetKey(jumpKey))
         {
-            newPosition.y += 200;
+            Jump();
         }
-        else if (transform.position.y >= 100)
-        {
-            newPosition.y -= 200;
-        }
-        if (transform.position.x <= -100)
-        {
-            newPosition.x += 200;
-        }
-        else if (transform.position.x >= 100)
-        {
-            newPosition.x -= 200;
-        }
-        if (transform.position.z <= -200)
-        {
-            newPosition.z += 400;
-        }
-        else if (transform.position.z >= 200)
-        {
-            newPosition.z -= 400;
-        }
-        transform.position = newPosition;
     }
 
     private void NormalMovement()
@@ -118,7 +91,10 @@ public class PlayerMovement : MonoBehaviour
             bool aboveParallel = dot >= 0;
             if (aboveParallel)
             {
-                cam.transform.localRotation = Quaternion.Euler(Mathf.Max(cam.transform.localRotation.eulerAngles.x, 360 - upperLimit), 0, 0);
+                if (cam.transform.localRotation.eulerAngles.x > 0)
+                {
+                    cam.transform.localRotation = Quaternion.Euler(Mathf.Max(cam.transform.localRotation.eulerAngles.x, 360 - upperLimit), 0, 0);
+                }
             }
             else
             {
@@ -131,6 +107,15 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void Jump()
+    {
+        print("jump");
+        if(Physics.BoxCast(transform.position, jumpCastExtents, -transform.up, transform.rotation, .9f))
+        {
+            print("jump successful");
+            rb.AddForce(transform.up * 10, ForceMode.VelocityChange);
+        }
+    }
     private void SwitchToNormal()
     {
         rb.velocity = storedVelocity;
