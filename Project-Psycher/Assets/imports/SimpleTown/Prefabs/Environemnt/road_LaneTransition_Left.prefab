@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2300000}
   - component: {fileID: 4822029313230719758}
   - component: {fileID: -560956527205280905}
+  - component: {fileID: 7380133227940290456}
   m_Layer: 0
   m_Name: road_LaneTransition_Left
   m_TagString: Untagged
@@ -114,19 +115,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &255559748784708811
+--- !u!65 &7380133227940290456
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459097923852562947}
+  m_GameObject: {fileID: 100000}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.099999785, y: 0.0040000277, z: 0.17}
-  m_Center: {x: -0.049999893, y: -0.0020000138, z: -0.085}
+  m_Size: {x: 10, y: 0.4, z: 17}
+  m_Center: {x: -5, y: -0.4, z: -8.5}
 --- !u!114 &5976773709584478640
 MonoBehaviour:
   m_ObjectHideFlags: 0

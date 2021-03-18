@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8571658879418436842}
   - component: {fileID: 8190374703108243804}
   - component: {fileID: -1090375134554344983}
+  - component: {fileID: 9107421077995393537}
   m_Layer: 0
   m_Name: road_cornerLines_mesh
   m_TagString: Untagged
@@ -141,6 +142,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &9107421077995393537
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 0.4000033, z: 20}
+  m_Center: {x: -10, y: -0.3947942, z: -9.999999}
 --- !u!65 &8711504593374408337
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -150,7 +164,7 @@ BoxCollider:
   m_GameObject: {fileID: 3300947091306207505}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.19999993, y: 0.0040000333, z: 0.19999999}
   m_Center: {x: -0.09999992, y: -0.0039479416, z: -0.099999994}
