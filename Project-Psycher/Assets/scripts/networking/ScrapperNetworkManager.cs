@@ -10,6 +10,8 @@ public class ScrapperNetworkManager : NetworkManager
     List<NetworkPlayerTest> players;
     public ScrapperLobby lobby;
     public NetworkManagerHUD networkManagerHUD;
+
+    public GameControl gameControl;
     public override void Start()
     {
         base.Start();
@@ -25,19 +27,36 @@ public class ScrapperNetworkManager : NetworkManager
         base.OnServerAddPlayer(conn);
         print(conn.connectionId);
         NetworkPlayerTest newPlayer = conn.identity.gameObject.GetComponent<NetworkPlayerTest>();
-        newPlayer.connId = conn.connectionId;
-        players.Add(newPlayer);
+        if (newPlayer != null)
+        {
+            newPlayer.connId = conn.connectionId;
+            players.Add(newPlayer);
+            if (newPlayer)
+            {
+                newPlayer.startingTime = startingTick;
+            }
+        }
         foreach(NetworkPlayerTest playerTest in players)
         {
             playerTest.RpcSetKinematic();
         }
-        if (newPlayer)
-        {
-            newPlayer.startingTime = startingTick;
-        }
         if (lobby)
         {
             lobby.AddUser(conn.connectionId);
+        }
+        if (gameControl)
+        {
+            gameControl.AddPlayer(conn.identity.gameObject);
+        }
+    }
+
+    public override void OnServerSceneChanged(string sceneName)
+    {
+        base.OnServerSceneChanged(sceneName);
+        GameObject gameController = GameObject.FindGameObjectWithTag("GameController");
+        if (gameController)
+        {
+            gameControl = gameController.GetComponent<GameControl>();
         }
     }
 

@@ -7,11 +7,11 @@ public class Rivet : MonoBehaviour
     public GameObject target;
     public GameObject attachedObject;
     public Rigidbody rb;
-    public bool mobile = false;
+    private RivetInfo rivetInfo;
     bool activated;
     void Update()
     {
-        if (!activated)
+        if (!activated || !rb)
         {
             return;
         }
@@ -33,7 +33,8 @@ public class Rivet : MonoBehaviour
         if (joint && rb)
         {
             joint.connectedBody = rb;
-            mobile = !rb.isKinematic;
+            rivetInfo = target.AddComponent<RivetInfo>();
+            rivetInfo.attachedRivet = this;
         }
     }
     public void PopoffObject()
@@ -42,21 +43,40 @@ public class Rivet : MonoBehaviour
         if (rb)
         {
             rb.isKinematic = false;
-            PopoffDependencies popoffDependencies = attachedObject.GetComponent<PopoffDependencies>();
-            if (popoffDependencies)
+            var popoffReactions = attachedObject.GetComponents<PopoffReactions>();
+            foreach(PopoffReactions reactor in popoffReactions)
             {
-                popoffDependencies.PopoffDependents();
+                reactor.Reaction(transform.position - target.transform.position);
             }
         }
         
     }
 
-    public void TurnOffGravity()
+    public void ToggleGravity(bool useGravity = false)
     {
         Rigidbody rb = attachedObject.GetComponent<Rigidbody>();
         if (rb)
         {
-            rb.useGravity = false;
+            rb.useGravity = useGravity;
         }
+    }
+
+    public void DestroyRivet(bool destroyPair = true)
+    {
+        if (activated && destroyPair)
+        {
+            target.GetComponent<Rivet>().DestroyRivet(false);
+        }
+        if (!attachedObject.GetComponent<DelayedGravityToggle>())
+        {
+            attachedObject.AddComponent<DelayedGravityToggle>();
+        }
+        Destroy(rivetInfo);
+        Destroy(this.gameObject);
+    }
+
+    public bool IsMobile()
+    {
+        return !attachedObject.GetComponent<Rigidbody>().isKinematic;
     }
 }

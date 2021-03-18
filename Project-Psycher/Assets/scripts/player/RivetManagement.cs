@@ -7,6 +7,7 @@ public class RivetManagement : MonoBehaviour
     public GameObject rivetPrefab;
     Rivet prevRivet;
     bool shotRivet = false;
+    public List<Rivet> activeRivets;
     public void ShootRivet(Vector3 direction, Vector3 position)
     {
         RaycastHit hitInfo;
@@ -27,27 +28,36 @@ public class RivetManagement : MonoBehaviour
         {
             prevRivet.ActivateRivet(newRivet);
             rivetScript.ActivateRivet(prevRivet.gameObject);
-            print(prevRivet.mobile);
-            print(rivetScript.mobile);
-            if(!rivetScript.mobile)
+            print(rivetScript.IsMobile());
+            print(prevRivet.IsMobile());
+            if(!rivetScript.IsMobile())
             {
-                prevRivet.TurnOffGravity();
-                if (!prevRivet.mobile)
+                prevRivet.ToggleGravity();
+                if (!prevRivet.IsMobile())
                 {
                     prevRivet.PopoffObject();
                 }
             }
-            else if (!prevRivet.mobile)
+            else if (!prevRivet.IsMobile())
             {
-                rivetScript.TurnOffGravity();
+                rivetScript.ToggleGravity();
             }
             prevRivet = null;
         }
         else
         {
             prevRivet = rivetScript;
+            activeRivets.Add(rivetScript);
         }
         shotRivet = !shotRivet;
+    }
 
+    public void DestroyAllRivets()
+    {
+        foreach(Rivet rivet in activeRivets)
+        {
+            rivet.DestroyRivet();
+        }
+        activeRivets = new List<Rivet>();
     }
 }

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PopoffDependencies : MonoBehaviour
+public class PopoffDependencies : PopoffReactions
 {
     public List<GameObject> dependents;
-    public void PopoffDependents()
+    public override void Reaction(Vector3 gravity)
     {
         foreach(GameObject dependent in dependents)
         {
@@ -16,7 +16,7 @@ public class PopoffDependencies : MonoBehaviour
                 PopoffDependencies popoffDependents = dependent.GetComponent<PopoffDependencies>();
                 if (popoffDependents)
                 {
-                    popoffDependents.PopoffDependents();
+                    popoffDependents.Reaction(gravity);
                 }
             }
         }

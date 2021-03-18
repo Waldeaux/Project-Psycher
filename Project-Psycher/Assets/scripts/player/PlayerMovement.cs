@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void Update()
+    public void ScrapperUpdate()
     {
 
         switch (currentState)
@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
                 break;
         }
     }
-    private void FixedUpdate()
+    public void ScrapperFixedUpdate()
     {
         if (Input.GetKey(jumpKey))
         {
