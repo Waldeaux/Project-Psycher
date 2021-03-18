@@ -28,8 +28,6 @@ public class RivetManagement : MonoBehaviour
         {
             prevRivet.ActivateRivet(newRivet);
             rivetScript.ActivateRivet(prevRivet.gameObject);
-            print(rivetScript.IsMobile());
-            print(prevRivet.IsMobile());
             if(!rivetScript.IsMobile())
             {
                 prevRivet.ToggleGravity();
@@ -58,6 +56,7 @@ public class RivetManagement : MonoBehaviour
         {
             rivet.DestroyRivet();
         }
+        shotRivet = false;
         activeRivets = new List<Rivet>();
     }
 }
