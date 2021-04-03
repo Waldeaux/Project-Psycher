@@ -142,6 +142,14 @@ PrefabInstance:
       propertyPath: playerPrefab
       value: 
       objectReference: {fileID: 2030349274404377042, guid: 59b75379c15a08644978c2035d4f5271, type: 3}
+    - target: {fileID: 7151143283329406972, guid: 421e2048021e37c4ca9e3ae68baa3396, type: 3}
+      propertyPath: spawnPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 410434990878009839, guid: b7d6155729d7ee345813f3cf68bb519f, type: 3}
+    - target: {fileID: 7151143283329406972, guid: 421e2048021e37c4ca9e3ae68baa3396, type: 3}
+      propertyPath: offlineScene
+      value: Assets/Scenes/Player_Join_Start_Point.unity
+      objectReference: {fileID: 0}
     - target: {fileID: 7151143283329406975, guid: 421e2048021e37c4ca9e3ae68baa3396, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

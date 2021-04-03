@@ -101,7 +101,6 @@ GameObject:
   - component: {fileID: -853408529534556454}
   - component: {fileID: 7295178846619607733}
   - component: {fileID: 5354419951502502289}
-  - component: {fileID: -4470660212160937034}
   m_Layer: 0
   m_Name: OnlinePlayer
   m_TagString: Player
@@ -117,7 +116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030349274404377042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.816515, y: 1.4464996, z: 2.8812037}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2030349273785125052}
@@ -235,7 +234,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba3668522e75b45acd4824ce00cfd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rivetPrefab: {fileID: 410434990878009839, guid: 287badcf84aa0a94ea74427379c4f968, type: 3}
+  syncMode: 0
+  syncInterval: 0.1
+  rivetPrefab: {fileID: 410434990878009839, guid: 4c74797a594caed499fc89cbefc42510, type: 3}
+  activeRivets: []
+  rivetRepresentative: {fileID: 410434990878009839, guid: b7d6155729d7ee345813f3cf68bb519f, type: 3}
 --- !u!114 &-853408529534556454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,27 +283,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
-  syncInterval: 0.1
+  syncInterval: 0
+  networkEnabled: 0
   networkKinematic: 1
---- !u!114 &-4470660212160937034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2030349274404377042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83392ae5c1b731446909f252fd494ae4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  target: {fileID: 2030349274404377044}
-  clientAuthority: 1
-  syncVelocity: 1
-  clearVelocity: 0
-  velocitySensitivity: 0.1
-  syncAngularVelocity: 1
-  clearAngularVelocity: 0
-  angularVelocitySensitivity: 0.1
+  position: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 0, z: 0, w: 0}
+  angularVelocity: {x: 0, y: 0, z: 0}

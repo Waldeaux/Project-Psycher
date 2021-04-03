@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 410434990878009837}
   - component: {fileID: 410434990878009838}
   m_Layer: 0
-  m_Name: Rivet
+  m_Name: NetworkRivet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,8 +89,8 @@ MonoBehaviour:
   attachedObject: {fileID: 0}
   rb: {fileID: 410434990878009836}
   activated: 0
-  indicatorPrefab: {fileID: 0}
-  indicatorInstance: {fileID: 4876792637498115098, guid: b5e4e7292ebd2bd44bcd2513b29bcd11, type: 3}
+  indicatorPrefab: {fileID: 4876792637498115098, guid: b5e4e7292ebd2bd44bcd2513b29bcd11, type: 3}
+  indicatorInstance: {fileID: 0}
   representative: {fileID: 0}
 --- !u!1 &1182478856632381091
 GameObject:
@@ -109,7 +109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5625865621180570145
 Transform:
   m_ObjectHideFlags: 0

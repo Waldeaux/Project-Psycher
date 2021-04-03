@@ -6,13 +6,12 @@ public class GameControl : MonoBehaviour
 {
     void Start()
     {
-        print(GameObject.FindGameObjectWithTag("GameInfo").GetComponent<GameInfo>().numPlayers);
     }
 
     public void AddPlayer(GameObject player)
     {
             player.GetComponent<Player>().networkEnabled = true;
-            player.GetComponent<NetworkRigidbody>().networkKinematic = false;
+            player.GetComponent<PlayerNetworkRigidbody>().networkKinematic = false;
     }
 
 }

@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 4119190970061397193}
   - component: {fileID: -4197749870601486250}
   - component: {fileID: 6882420334705235985}
+  - component: {fileID: 5888559625305222287}
+  - component: {fileID: -6711038574420915858}
   m_Layer: 0
   m_Name: bin_mesh
   m_TagString: Untagged
@@ -187,7 +189,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edeb97ab03c9899479c864cdf2da8ba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: 0
   breakforce: 1000
+  offset: {x: 0, y: 0, z: 0}
+  spotIndicator: {fileID: 0}
+--- !u!114 &5888559625305222287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
+--- !u!114 &-6711038574420915858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3440f54b449c48143a3774eedf33fd28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0
+  networkEnabled: 0
+  networkKinematic: 0
+  networkUseGravity: 0
 --- !u!1001 &5254887589983224390
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,7 +1,7 @@
 ﻿using Mirror;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : NetworkBehaviour
 {
     RivetManagement rivetManagement;
     Camera cam;
@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     KeyCode clearRivets = KeyCode.R;
     PlayerMovement playerMovement;
 
-    //[SyncVar(hook = "NetworkEnabled")]
+    [SyncVar(hook = "NetworkEnabled")]
     public bool networkEnabled;
 
     void Start()
@@ -17,16 +17,16 @@ public class Player : MonoBehaviour
         rivetManagement = GetComponent<RivetManagement>();
         cam = GetComponentInChildren<Camera>();
         playerMovement = GetComponent<PlayerMovement>();
-        if (false)//isLocalPlayer)
+        if (!isLocalPlayer)
         {
-            //ClearNonPlayerComponents();
+            ClearNonPlayerComponents();
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!networkEnabled|| false)//!hasAuthority)
+        if (!networkEnabled|| !hasAuthority)
         {
             return;
         }
@@ -56,13 +56,13 @@ public class Player : MonoBehaviour
     {
         if (rivetManagement)
         {
-            rivetManagement.DestroyAllRivets();
+            rivetManagement.CmdDestroyAllRivets();
         }
     }
 
     private void FixedUpdate()
     {
-        if (false)//!isLocalPlayer)
+        if (!isLocalPlayer)
         {
             return;
         }
@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
         this.enabled = newEnabled;
     }
 
-    /*
+    
     [ClientRpc]
     public void RpcClearNonPlayerComponents()
     {
@@ -86,13 +86,13 @@ public class Player : MonoBehaviour
 
     private void ClearNonPlayerComponents()
     {
-        if (false)//isLocalPlayer)
+        if (isLocalPlayer)
         {
             return;
         }
         Destroy(cam.gameObject);
         Destroy(playerMovement);
-        Destroy(rivetManagement);
+        //Destroy(rivetManagement);
         Destroy(this);
-    }*/
+    }
 }
