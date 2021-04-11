@@ -10,11 +10,10 @@ public class MapBounds : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.angularVelocity = transform.right*100;
+        rb.velocity = transform.right * 100;
     }
     private void FixedUpdate()
     {
-        if (!outOfBounds)
-        {
             if (transform.position.magnitude > 250)
             {
                 rb.useGravity = false;
@@ -24,14 +23,12 @@ public class MapBounds : MonoBehaviour
                 if (rb.velocity.magnitude < 1)
                 {
                     rb.velocity = Vector3.zero;
-                    outOfBounds = true;
                     if (rb.angularVelocity.magnitude > 1)
                     {
                         rb.angularVelocity = rb.angularVelocity.normalized;
                     }
                 }
             }
-        }
 
     }
 }

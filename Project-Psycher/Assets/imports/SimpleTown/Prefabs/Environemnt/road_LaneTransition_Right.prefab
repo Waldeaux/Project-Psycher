@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 3073809287290278956}
   - component: {fileID: 8108546403844028136}
   - component: {fileID: 6180395282892827169}
+  - component: {fileID: 8168273815881203761}
+  - component: {fileID: 1149864505726154472}
   m_Layer: 0
   m_Name: road_LaneTransition_Right
   m_TagString: Untagged
@@ -128,6 +130,38 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 0.4, z: 17}
   m_Center: {x: -5, y: -0.4, z: 8.5}
+--- !u!114 &8168273815881203761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
+--- !u!114 &1149864505726154472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3440f54b449c48143a3774eedf33fd28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  networkKinematic: 0
+  networkUseGravity: 0
 --- !u!114 &5308259507230521964
 MonoBehaviour:
   m_ObjectHideFlags: 0

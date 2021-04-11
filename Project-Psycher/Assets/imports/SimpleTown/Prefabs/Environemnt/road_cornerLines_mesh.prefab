@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 8190374703108243804}
   - component: {fileID: -1090375134554344983}
   - component: {fileID: 9107421077995393537}
+  - component: {fileID: 7998745132867441810}
+  - component: {fileID: -5338921256738220833}
   m_Layer: 0
   m_Name: road_cornerLines_mesh
   m_TagString: Untagged
@@ -155,6 +157,38 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 20, y: 0.4000033, z: 20}
   m_Center: {x: -10, y: -0.3947942, z: -9.999999}
+--- !u!114 &7998745132867441810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
+--- !u!114 &-5338921256738220833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3440f54b449c48143a3774eedf33fd28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  networkKinematic: 0
+  networkUseGravity: 0
 --- !u!65 &8711504593374408337
 BoxCollider:
   m_ObjectHideFlags: 0

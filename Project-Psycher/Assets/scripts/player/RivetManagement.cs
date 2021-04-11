@@ -38,28 +38,9 @@ public class RivetManagement : NetworkBehaviour
         Vector3 normal = hitInfo.normal;
         GameObject target = hitInfo.collider.gameObject;
         GameObject newRivet = GameObject.Instantiate(rivetPrefab);
-        newRivet.transform.position = spawnPosition;
-        newRivet.transform.rotation = Quaternion.LookRotation(normal);
         Rivet rivetScript = newRivet.GetComponent<Rivet>();
-        rivetScript.AttachRivet(target);
-        if (shotRivet)
-        {
-            prevRivet.ActivateRivet(newRivet);
-            rivetScript.ActivateRivet(prevRivet.gameObject);
-            if (!rivetScript.IsMobile())
-            {
-                //prevRivet.ToggleGravity();
-                if (!prevRivet.IsMobile())
-                {
-                    prevRivet.PopoffObject();
-                }
-            }
-            else if (!prevRivet.IsMobile())
-            {
-                //rivetScript.ToggleGravity();
-            }
-        }
-        else
+        RivetFunctions.CreateRivet(spawnPosition, normal, target, newRivet, shotRivet, prevRivet);
+        if (!shotRivet)
         {
             prevRivet = rivetScript;
             activeRivets.Add(rivetScript);
@@ -80,7 +61,25 @@ public class RivetManagement : NetworkBehaviour
         rivetScript.representative = rivetRepresentative;
         shotRivet = !shotRivet;
     }
-
+    public void CreateRivet(Vector3 position, Vector3 spawnNormal, GameObject targetObject, GameObject newRivet, bool shotRivet, Rivet prevRivet)
+    {
+        newRivet.transform.position = position;
+        newRivet.transform.rotation = Quaternion.LookRotation(spawnNormal);
+        Rivet rivetScript = newRivet.GetComponent<Rivet>();
+        rivetScript.AttachRivet(targetObject);
+        if (shotRivet)
+        {
+            prevRivet.ActivateRivet(newRivet);
+            rivetScript.ActivateRivet(prevRivet.gameObject);
+            if (!rivetScript.IsMobile())
+            {
+                if (!prevRivet.IsMobile())
+                {
+                    prevRivet.PopoffObject();
+                }
+            }
+        }
+    }
     [ClientRpc]
     void AttachRivetRepresentative(GameObject target, GameObject rivet, GameObject pairedRepresentative)
     {

@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 6198873778325439304}
   - component: {fileID: 3477987357247884071}
   - component: {fileID: 8405524479079290297}
+  - component: {fileID: 7835441030370922189}
+  - component: {fileID: -7251745716897787667}
   m_Layer: 0
   m_Name: Building_OfficeMedium_Blue
   m_TagString: Untagged
@@ -533,6 +535,38 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7835441030370922189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
+--- !u!114 &-7251745716897787667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3440f54b449c48143a3774eedf33fd28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  networkKinematic: 0
+  networkUseGravity: 0
 --- !u!1001 &774390208020831883
 PrefabInstance:
   m_ObjectHideFlags: 0

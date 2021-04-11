@@ -13,6 +13,10 @@ public class DelayedGravityToggle : MonoBehaviour
             {
                 rb.useGravity = true;
             }
+            if (this.gameObject.GetComponent<MapBounds>())
+            {
+                this.gameObject.GetComponent<MapBounds>().enabled = true;
+            }
         }
         Destroy(this);
     }

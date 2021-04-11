@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 4298780981117236568}
   - component: {fileID: 4656466282983450967}
   - component: {fileID: 1375354028030958647}
+  - component: {fileID: -4611075885825642414}
+  - component: {fileID: -6996103918083437598}
   m_Layer: 0
   m_Name: road_straight_clear_mesh
   m_TagString: Untagged
@@ -127,6 +129,38 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 0.4, z: 10}
   m_Center: {x: -2.499995, y: -0.3947958, z: -5}
+--- !u!114 &-4611075885825642414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
+--- !u!114 &-6996103918083437598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3440f54b449c48143a3774eedf33fd28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  networkKinematic: 0
+  networkUseGravity: 0
 --- !u!1001 &6214247802823399081
 PrefabInstance:
   m_ObjectHideFlags: 0

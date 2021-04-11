@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Quaternion targetCalibrationRotation;
 
-    private Vector3 jumpCastExtents = new Vector3(.77f, .1f, .77f);
+    private Vector3 jumpCastExtents = new Vector3(.5f, .1f, .5f);
 
 
     private Vector3 storedVelocity;
@@ -113,7 +113,8 @@ public class PlayerMovement : MonoBehaviour
         if(Physics.BoxCast(transform.position, jumpCastExtents, -transform.up, transform.rotation, .9f))
         {
             print("jump successful");
-            rb.AddForce(transform.up * 10, ForceMode.VelocityChange);
+            Vector3 currentUp = Vector3.Project(rb.velocity, transform.up);
+            rb.AddForce(transform.up * (10 - currentUp.magnitude), ForceMode.VelocityChange);
         }
     }
     private void SwitchToNormal()

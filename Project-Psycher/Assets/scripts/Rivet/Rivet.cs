@@ -17,7 +17,6 @@ public class Rivet : MonoBehaviour
     private float magnitude = 5;
     void FixedUpdate()
     {
-
         if (!activated || !rb)
         {
             return;
@@ -36,18 +35,24 @@ public class Rivet : MonoBehaviour
     {
         target = targetInput;
         activated = true;
+        /*if (attachedObject.GetComponent<MapBounds>())
+        {
+            attachedObject.GetComponent<MapBounds>().enabled = false;
+        }*/
     }
 
     public void AttachRivet(GameObject target)
     {
+        print(target);
         attachedObject = target;
+
         FixedJoint joint = GetComponent<FixedJoint>();
         rb = target.GetComponent<Rigidbody>();
         if (rb)
         {
             if (!target.GetComponent<ObjectNetworkRigidbody>())
             {
-                ObjectNetworkRigidbody nRb = target.AddComponent<ObjectNetworkRigidbody>();
+                //ObjectNetworkRigidbody nRb = target.AddComponent<ObjectNetworkRigidbody>();
             }
         }
         if (joint && rb)
@@ -106,4 +111,5 @@ public class Rivet : MonoBehaviour
     {
         return !attachedObject.GetComponent<Rigidbody>().isKinematic && attachedObject.GetComponent<FixedJoint>() == null;
     }
+
 }

@@ -20,6 +20,7 @@ public class ObjectNetworkRigidbody : NetworkBehaviour
     {
         rb = GetComponent<Rigidbody>();
         networkKinematic = rb.isKinematic;
+        networkUseGravity = rb.useGravity;
         RefreshStruct();
     }
 

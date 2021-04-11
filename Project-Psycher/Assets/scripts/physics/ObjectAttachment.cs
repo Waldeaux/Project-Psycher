@@ -25,11 +25,15 @@ public class ObjectAttachment : MonoBehaviour
             {
                 print("good");
             }
+            transform.position = hitInfo.point - relativeOffset;
             if (hitInfo.rigidbody)
             {
                 FixedJoint joint = gameObject.AddComponent<FixedJoint>();
                 joint.connectedBody = hitInfo.rigidbody;
-                joint.breakForce = breakforce;
+                if (breakforce > 0)
+                {
+                    joint.breakForce = breakforce;
+                }
             }
         }
     }

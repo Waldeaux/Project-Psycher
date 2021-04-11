@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2300000}
   - component: {fileID: -5922527401224148736}
   - component: {fileID: 4366983795957789662}
+  - component: {fileID: -4039131110850069088}
+  - component: {fileID: 3573468342941201342}
   m_Layer: 0
   m_Name: roadLane_straight_Centered_mesh
   m_TagString: Untagged
@@ -114,6 +116,38 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 0.4, z: 7}
   m_Center: {x: -2.5, y: -0.4, z: -3.5}
+--- !u!114 &-4039131110850069088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
+--- !u!114 &3573468342941201342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3440f54b449c48143a3774eedf33fd28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  networkKinematic: 0
+  networkUseGravity: 0
 --- !u!1001 &9102781862923369552
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1675,6 +1675,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -567604935769555524, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
+      propertyPath: sceneId
+      value: 1489764587
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
       propertyPath: m_Name
       value: hydrant_mesh
@@ -1732,6 +1736,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -567604935769555524, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
+      propertyPath: sceneId
+      value: 4123187846
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
       propertyPath: m_Name
       value: hydrant_mesh
@@ -2372,6 +2380,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 3688289913
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -4374,6 +4386,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 3739291537
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -4991,6 +5007,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -567604935769555524, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
+      propertyPath: sceneId
+      value: 1489165212
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
       propertyPath: m_Name
       value: hydrant_mesh
@@ -5048,6 +5068,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -567604935769555524, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
+      propertyPath: sceneId
+      value: 3802122645
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
       propertyPath: m_Name
       value: hydrant_mesh
@@ -5212,6 +5236,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 2776148641
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -5273,6 +5301,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 1349766918
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -5334,6 +5366,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 4062481096
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -5395,6 +5431,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 1543367568
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -5500,6 +5540,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5888559625305222287, guid: b315fa776449eec44a8591af7353afe8, type: 3}
+      propertyPath: sceneId
+      value: 2234706876
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b315fa776449eec44a8591af7353afe8, type: 3}
 --- !u!1001 &1546
@@ -5553,6 +5597,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5888559625305222287, guid: b315fa776449eec44a8591af7353afe8, type: 3}
+      propertyPath: sceneId
+      value: 462241436
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b315fa776449eec44a8591af7353afe8, type: 3}
 --- !u!1001 &1549
@@ -5562,6 +5610,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 3776892652
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -5915,6 +5967,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5888559625305222287, guid: b315fa776449eec44a8591af7353afe8, type: 3}
+      propertyPath: sceneId
+      value: 2672931479
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b315fa776449eec44a8591af7353afe8, type: 3}
 --- !u!1001 &1558
@@ -5967,6 +6023,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: b315fa776449eec44a8591af7353afe8, type: 3}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888559625305222287, guid: b315fa776449eec44a8591af7353afe8, type: 3}
+      propertyPath: sceneId
+      value: 1364166340
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b315fa776449eec44a8591af7353afe8, type: 3}
@@ -7988,6 +8048,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -567604935769555524, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
+      propertyPath: sceneId
+      value: 652928906
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -8240,6 +8304,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: b315fa776449eec44a8591af7353afe8, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888559625305222287, guid: b315fa776449eec44a8591af7353afe8, type: 3}
+      propertyPath: sceneId
+      value: 2737850387
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b315fa776449eec44a8591af7353afe8, type: 3}
@@ -8681,6 +8749,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 2308201307
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -8840,23 +8912,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
   m_PrefabInstance: {fileID: 1286955490}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &29851270 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2030349273785125053, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-  m_PrefabInstance: {fileID: 2030349273620628113}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &29851271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 29851270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96097d091d976564b8f95c86a10fa966, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &30785217 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b3eae81a4a54d684fb5ecbe732674b38, type: 3}
@@ -8915,6 +8970,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 157797358
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -9022,6 +9081,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 2834171993
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -9327,6 +9390,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5888559625305222287, guid: b315fa776449eec44a8591af7353afe8, type: 3}
+      propertyPath: sceneId
+      value: 735511910
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b315fa776449eec44a8591af7353afe8, type: 3}
 --- !u!4 &72531267 stripped
@@ -9390,6 +9457,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 1425274996
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -9686,6 +9757,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 2806284955
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -9747,6 +9822,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 1320959131
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -10242,6 +10321,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 2421850756
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -10357,6 +10440,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 540501248
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -10526,6 +10613,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -567604935769555524, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
+      propertyPath: sceneId
+      value: 2742639829
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
       propertyPath: m_Name
       value: hydrant_mesh
@@ -11172,6 +11263,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: b315fa776449eec44a8591af7353afe8, type: 3}
       propertyPath: m_RootOrder
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888559625305222287, guid: b315fa776449eec44a8591af7353afe8, type: 3}
+      propertyPath: sceneId
+      value: 3702612749
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b315fa776449eec44a8591af7353afe8, type: 3}
@@ -12079,6 +12174,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 126976469
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -12186,6 +12285,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 3195804381
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -12370,6 +12473,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 2217065211
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -12620,6 +12727,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 146475844
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -12734,6 +12845,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: b315fa776449eec44a8591af7353afe8, type: 3}
       propertyPath: m_RootOrder
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888559625305222287, guid: b315fa776449eec44a8591af7353afe8, type: 3}
+      propertyPath: sceneId
+      value: 2523857310
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b315fa776449eec44a8591af7353afe8, type: 3}
@@ -12876,6 +12991,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 4130219440
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -12937,6 +13056,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 279259088
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -13060,6 +13183,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 2379977254
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -13381,6 +13508,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 5888559625305222287, guid: b315fa776449eec44a8591af7353afe8, type: 3}
+      propertyPath: sceneId
+      value: 17671440
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b315fa776449eec44a8591af7353afe8, type: 3}
 --- !u!1001 &373199306
@@ -13436,6 +13567,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 1167476358
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -13792,6 +13927,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 5888559625305222287, guid: b315fa776449eec44a8591af7353afe8, type: 3}
+      propertyPath: sceneId
+      value: 1094476556
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b315fa776449eec44a8591af7353afe8, type: 3}
 --- !u!1001 &416882379
@@ -14060,6 +14199,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -567604935769555524, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
+      propertyPath: sceneId
+      value: 2269383310
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
       propertyPath: m_Name
       value: hydrant_mesh
@@ -14506,6 +14649,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 3490733736
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -14567,6 +14714,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 2588961901
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -14830,6 +14981,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 949492164
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -14992,6 +15147,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 3498592333
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -15118,6 +15277,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 309828523
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -15742,6 +15905,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 1740465255
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -15951,6 +16118,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 834259500
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -16239,6 +16410,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 845211836
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -16602,6 +16777,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -567604935769555524, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
+      propertyPath: sceneId
+      value: 1710395478
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
       propertyPath: m_Name
       value: hydrant_mesh
@@ -16710,6 +16889,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -567604935769555524, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
+      propertyPath: sceneId
+      value: 1266114244
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
       propertyPath: m_Name
       value: hydrant_mesh
@@ -17318,6 +17501,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 2001245315
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -17383,6 +17570,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 1420315230
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -17685,6 +17876,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 622391320
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -18022,6 +18217,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 5888559625305222287, guid: b315fa776449eec44a8591af7353afe8, type: 3}
+      propertyPath: sceneId
+      value: 585886265
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b315fa776449eec44a8591af7353afe8, type: 3}
 --- !u!1001 &749261741
@@ -18087,6 +18286,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 1591848444
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -18802,6 +19005,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 5888559625305222287, guid: b315fa776449eec44a8591af7353afe8, type: 3}
+      propertyPath: sceneId
+      value: 3234645116
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b315fa776449eec44a8591af7353afe8, type: 3}
 --- !u!1001 &810577830
@@ -19283,6 +19490,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 4039883346
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -19763,6 +19974,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 1667161367
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -20463,87 +20678,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d80c7433031fdee44bf3910c4b046ce7, type: 3}
---- !u!1 &992256717
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 992256720}
-  - component: {fileID: 992256719}
-  - component: {fileID: 992256718}
-  m_Layer: 0
-  m_Name: Capsule
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &992256718
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992256717}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &992256719
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992256717}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &992256720
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992256717}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2080053816}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &993760178 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: d80c7433031fdee44bf3910c4b046ce7, type: 3}
@@ -20739,6 +20873,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 685583491
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -21014,6 +21152,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 2290763884
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -21794,6 +21936,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 1795572266
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -22501,6 +22647,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -567604935769555524, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
+      propertyPath: sceneId
+      value: 2736388334
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
       propertyPath: m_Name
       value: hydrant_mesh
@@ -22632,6 +22782,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 3240675410
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -22693,6 +22847,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -567604935769555524, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
+      propertyPath: sceneId
+      value: 4017995848
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
       propertyPath: m_Name
       value: hydrant_mesh
@@ -22825,6 +22983,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 1125705009
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -23104,7 +23266,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1230565641 stripped
 Transform:
@@ -23683,6 +23845,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 3032622802
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -23744,6 +23910,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 1736151557
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -24284,6 +24454,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 2093039746
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -24395,6 +24569,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 1547356862
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -24461,6 +24639,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -567604935769555524, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
+      propertyPath: sceneId
+      value: 1031277247
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
       propertyPath: m_Name
       value: hydrant_mesh
@@ -24899,6 +25081,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 1792466997
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -24960,6 +25146,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 738900461
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -25021,6 +25211,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 3966319521
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -25373,6 +25567,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -567604935769555524, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
+      propertyPath: sceneId
+      value: 4129158478
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d640ca176c8536040aded4c2dc0fe3fa, type: 3}
       propertyPath: m_Name
       value: hydrant_mesh
@@ -26119,6 +26317,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 2576246188
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -27109,6 +27311,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 3386370981
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -27442,6 +27648,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 4084300421
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -27889,6 +28099,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 1920580343
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -28352,6 +28566,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 484948844
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -28423,6 +28641,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 195582546
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -28870,6 +29092,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 2663095720
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -30017,6 +30243,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 3757330203
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -30209,6 +30439,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 2161527912
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -30270,6 +30504,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 3560300813
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -30781,6 +31019,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 1874408418
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -31176,6 +31418,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 4238736617
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -31554,6 +31800,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 5888559625305222287, guid: b315fa776449eec44a8591af7353afe8, type: 3}
+      propertyPath: sceneId
+      value: 2936045390
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b315fa776449eec44a8591af7353afe8, type: 3}
 --- !u!1001 &2004783091
@@ -31716,6 +31966,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 1888995694
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -31854,6 +32108,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 2196059768
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -31958,6 +32216,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: b315fa776449eec44a8591af7353afe8, type: 3}
       propertyPath: m_RootOrder
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888559625305222287, guid: b315fa776449eec44a8591af7353afe8, type: 3}
+      propertyPath: sceneId
+      value: 3246190725
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b315fa776449eec44a8591af7353afe8, type: 3}
@@ -32078,6 +32340,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 3782612090
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -32257,6 +32523,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: b315fa776449eec44a8591af7353afe8, type: 3}
       propertyPath: m_RootOrder
       value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888559625305222287, guid: b315fa776449eec44a8591af7353afe8, type: 3}
+      propertyPath: sceneId
+      value: 1747355379
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b315fa776449eec44a8591af7353afe8, type: 3}
@@ -32468,56 +32738,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d80c7433031fdee44bf3910c4b046ce7, type: 3}
---- !u!1 &2080053808 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2030349274404377042, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-  m_PrefabInstance: {fileID: 2030349273620628113}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2080053809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2080053808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d24b30f415c7974bb4c5e0819038b5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  networkEnabled: 1
---- !u!114 &2080053810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2080053808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a657e3e5efa94ad39b8b5dcb5eda8a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  graphicsObject: {fileID: 992256717}
---- !u!114 &2080053811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2080053808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef2247c251958014e876fea38c3dfa94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  portalPrefab: {fileID: 5995654926570338926, guid: be716e5478850154485394c708fea348, type: 3}
-  cam: {fileID: 29851271}
---- !u!4 &2080053816 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2030349274404377048, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-  m_PrefabInstance: {fileID: 2030349273620628113}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2084905276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32998,6 +33218,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 3194465513
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -33110,6 +33334,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522}
     m_Modifications:
+    - target: {fileID: -6707048646827303136, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
+      propertyPath: sceneId
+      value: 1242477028
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d50cf3ef635cb942a43009b33905c3d, type: 3}
       propertyPath: m_Name
       value: lamp_mesh
@@ -33701,89 +33929,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2d19a841f3ad864289c40e9f3977b6a, type: 3}
---- !u!1001 &2030349273620628113
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2030349273785125053, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-      propertyPath: m_TagString
-      value: MainCamera
-      objectReference: {fileID: 0}
-    - target: {fileID: 2030349273785125054, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-      propertyPath: far clip plane
-      value: 10000
-      objectReference: {fileID: 0}
-    - target: {fileID: 2030349273785125054, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-      propertyPath: m_ClearFlags
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2030349274404377042, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2030349274404377042, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2030349274404377044, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2030349274404377045, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-      propertyPath: lowerLimit
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 2030349274404377048, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2030349274404377048, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2030349274404377048, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2030349274404377048, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2030349274404377048, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2030349274404377048, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2030349274404377048, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2030349274404377048, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2030349274404377048, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2030349274404377048, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2030349274404377048, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2030349274404377046, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-    - {fileID: 2030349274404377049, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: 2c7d0d37156bc044cbdce0fa1b619066, type: 3}
 --- !u!1001 &6678004149850633308
 PrefabInstance:
   m_ObjectHideFlags: 0
