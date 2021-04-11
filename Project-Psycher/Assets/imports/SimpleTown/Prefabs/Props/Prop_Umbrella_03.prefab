@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 7032269802890272572}
   - component: {fileID: -5567376117024108476}
   - component: {fileID: 9168727513201129376}
+  - component: {fileID: 68581878522044336}
   m_Layer: 0
   m_Name: Prop_Umbrella_03
   m_TagString: Untagged
@@ -220,3 +221,19 @@ MonoBehaviour:
   syncInterval: 0.1
   networkKinematic: 0
   networkUseGravity: 0
+--- !u!114 &68581878522044336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edeb97ab03c9899479c864cdf2da8ba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  breakforce: 1000
+  offset: {x: 0, y: 0, z: 0}
+  spotIndicator: {fileID: 0}

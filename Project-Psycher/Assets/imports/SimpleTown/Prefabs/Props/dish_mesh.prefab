@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: -6598135271006359249}
   - component: {fileID: -2725793900545952929}
   - component: {fileID: 839663474687375881}
+  - component: {fileID: 226138314890583973}
   m_Layer: 0
   m_Name: dish_mesh
   m_TagString: Untagged
@@ -250,3 +251,19 @@ MonoBehaviour:
   syncInterval: 0.1
   networkKinematic: 0
   networkUseGravity: 0
+--- !u!114 &226138314890583973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edeb97ab03c9899479c864cdf2da8ba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  breakforce: 1000
+  offset: {x: 0, y: 0, z: 0}
+  spotIndicator: {fileID: 0}

@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -8796177645839864505}
   - component: {fileID: -4072552246833759021}
   - component: {fileID: 7510538012270674920}
+  - component: {fileID: 3687666796501382555}
   m_Layer: 0
   m_Name: dumpster_mesh
   m_TagString: Untagged
@@ -191,6 +192,22 @@ MonoBehaviour:
   syncInterval: 0.1
   networkKinematic: 0
   networkUseGravity: 0
+--- !u!114 &3687666796501382555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edeb97ab03c9899479c864cdf2da8ba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  breakforce: 1000
+  offset: {x: 0, y: 0, z: 0}
+  spotIndicator: {fileID: 0}
 --- !u!1 &1651668881909458993
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 6721599148979226430}
   - component: {fileID: 163229676242658674}
   - component: {fileID: 5671855898023550095}
+  - component: {fileID: -7836908393374400185}
   m_Layer: 0
   m_Name: Prop_Roadsign_03
   m_TagString: Untagged
@@ -216,3 +217,19 @@ MonoBehaviour:
   syncInterval: 0.1
   networkKinematic: 0
   networkUseGravity: 0
+--- !u!114 &-7836908393374400185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edeb97ab03c9899479c864cdf2da8ba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  breakforce: 1000
+  offset: {x: 0, y: 0, z: 0}
+  spotIndicator: {fileID: 0}
