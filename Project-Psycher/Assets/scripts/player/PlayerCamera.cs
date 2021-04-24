@@ -15,4 +15,9 @@ public class PlayerCamera : MonoBehaviour
     {
         camera.SwitchToImmobile();
     }
+
+    public void SwitchToOffset()
+    {
+        camera.SwitchToOffset();
+    }
 }

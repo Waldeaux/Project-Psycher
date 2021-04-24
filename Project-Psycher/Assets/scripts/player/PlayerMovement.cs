@@ -12,10 +12,14 @@ public class PlayerMovement : MonoBehaviour
     public float upperLimit;
     public float lowerLimit;
 
+    private PlayerCamera playerCamera;
+
     private Vector3 camPosition;
     private Quaternion camRotation;
 
     public bool relativeVelocity;
+
+    private Vector3 gravity;
 
     public bool easeRecalibrate;
 
@@ -39,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        playerCamera = GetComponent<PlayerCamera>();
         if(speed == 0)
         {
             speed = 1;
@@ -49,17 +54,17 @@ public class PlayerMovement : MonoBehaviour
         }
         if(recalibrateSpeed == 0)
         {
-            recalibrateSpeed = 1;
+            recalibrateSpeed = 90;
         }
+        gravity = -transform.up;
     }
 
     public void ScrapperUpdate()
     {
-
         switch (currentState)
         {
             case (PlayerState.recalibrate):
-                MoveCamera();
+                //MoveCamera();
                 OneTimeRecalibrate();
                 break;
             default:
@@ -77,10 +82,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void NormalMovement()
     {
+        
         Vector3 planarMovement = (transform.forward * Input.GetAxis("Vertical") + transform.right * Input.GetAxis("Horizontal")) * speed;
         Vector3 upMovement = Vector3.Project(rb.velocity, transform.up) - transform.up * 9.8f * Time.deltaTime;
-        rb.velocity = upMovement + planarMovement;
-
+        rb.velocity = upMovement + planarMovement + gravity*9.8f * Time.deltaTime;
         rb.rotation *= Quaternion.AngleAxis(rotationSpeed * Input.GetAxis("Mouse X"), transform.InverseTransformDirection(transform.up));
 
         cam.transform.rotation *= Quaternion.AngleAxis(rotationSpeed * -Input.GetAxis("Mouse Y"), cam.transform.InverseTransformDirection(cam.transform.right));
@@ -121,8 +126,8 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = storedVelocity;
         currentState = PlayerState.normal;
-        camPosition = Vector3.zero;
-        camRotation = Quaternion.Euler(Vector3.zero);
+        playerCamera.SwitchToImmobile();
+        gravity = -transform.up;
         NormalMovement();
     }
 
@@ -130,8 +135,7 @@ public class PlayerMovement : MonoBehaviour
     {
         storedVelocity = rb.velocity;
         rb.velocity = Vector3.zero;
-        camPosition = new Vector3(0, 10, 0);
-        camRotation = Quaternion.Euler(90, 0, 0);
+        playerCamera.SwitchToOffset();
         targetCalibrationRotation = transform.rotation;
 
         currentState = PlayerState.recalibrate;
@@ -151,7 +155,8 @@ public class PlayerMovement : MonoBehaviour
         {
             ConstantRecalibrationRotation();
         }
-        if(Quaternion.Angle(transform.rotation, targetCalibrationRotation) <= 1)
+        print(Quaternion.Angle(transform.rotation, targetCalibrationRotation));
+        if (Quaternion.Angle(transform.rotation, targetCalibrationRotation) <= 1)
         {
             float verticalInput = Input.GetAxis("Vertical");
             float horizontalInput = Input.GetAxis("Horizontal");
@@ -170,7 +175,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void EaseRecalibrationRotation()
     {
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetCalibrationRotation, Mathf.Min(Time.deltaTime * 10, 1));
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetCalibrationRotation, Mathf.Min(Time.deltaTime * recalibrateSpeed, 1));
     }
     private void Recalibrate()
     {

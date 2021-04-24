@@ -135,4 +135,14 @@ public class Player : NetworkBehaviour
         //Destroy(rivetManagement);
         Destroy(this);
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.rigidbody)
+        {
+            if ((collision.rigidbody.mass * collision.relativeVelocity).magnitude >= 100)
+            {
+                StartRagdoll();
+            }
+        }
+    }
 }

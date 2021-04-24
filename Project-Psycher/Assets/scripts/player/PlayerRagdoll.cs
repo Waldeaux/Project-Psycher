@@ -14,7 +14,6 @@ public class PlayerRagdoll : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        StartRagdoll();
     }
     public void RagdollUpdate()
     {
@@ -42,6 +41,7 @@ public class PlayerRagdoll : MonoBehaviour
 
     public void StartRagdoll()
     {
+        print("start ragdoll");
         ragdollTimer = 0;
         currentState = State.ragdoll;
         rb.constraints = RigidbodyConstraints.None;
@@ -58,15 +58,5 @@ public class PlayerRagdoll : MonoBehaviour
     {
         currentState = State.player;
         player.EndRagdoll();
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.rigidbody)
-        {
-            if ((collision.rigidbody.mass * collision.relativeVelocity).magnitude >= 100)
-            {
-                player.StartRagdoll();
-            }
-        }
     }
 }
