@@ -36,7 +36,7 @@ public class RivetManagement : NetworkBehaviour
         }
         Vector3 spawnPosition = hitInfo.point;
         Vector3 normal = hitInfo.normal;
-        GameObject target = hitInfo.collider.gameObject;
+        GameObject target = hitInfo.collider.gameObject.GetComponentInParent<Rigidbody>().gameObject;
         GameObject newRivet = GameObject.Instantiate(rivetPrefab);
         Rivet rivetScript = newRivet.GetComponent<Rivet>();
         RivetFunctions.CreateRivet(spawnPosition, normal, target, newRivet, shotRivet, prevRivet);

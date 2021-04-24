@@ -8,15 +8,23 @@ public class Player : NetworkBehaviour
     KeyCode shootRivet = KeyCode.E;
     KeyCode clearRivets = KeyCode.R;
     PlayerMovement playerMovement;
+    PlayerRagdoll playerRagdoll;
+    PlayerCamera playerCamera;
 
     [SyncVar(hook = "NetworkEnabled")]
     public bool networkEnabled;
+
+    private enum State { player, ragdoll}
+
+    private State currentState = State.player;
 
     void Start()
     {
         rivetManagement = GetComponent<RivetManagement>();
         cam = GetComponentInChildren<Camera>();
         playerMovement = GetComponent<PlayerMovement>();
+        playerRagdoll = GetComponent<PlayerRagdoll>();
+        playerCamera = GetComponent<PlayerCamera>();
         if (!isLocalPlayer)
         {
             ClearNonPlayerComponents();
@@ -26,24 +34,49 @@ public class Player : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!networkEnabled|| !hasAuthority)
+        switch (currentState)
         {
-            return;
-        }
-        if (playerMovement)
-        {
-            playerMovement.ScrapperUpdate();
-        }
-        if (Input.GetKeyDown(shootRivet))
-        {
-            ShootRivet();
-        }
-        if (Input.GetKeyDown(clearRivets))
-        {
-            ClearRivets();
+            case (State.player):
+                if (!networkEnabled || !hasAuthority)
+                {
+                    return;
+                }
+                if (playerMovement)
+                {
+                    playerMovement.ScrapperUpdate();
+                }
+                if (Input.GetKeyDown(shootRivet))
+                {
+                    ShootRivet();
+                }
+                if (Input.GetKeyDown(clearRivets))
+                {
+                    ClearRivets();
+                }
+                break;
+
+            case (State.ragdoll):
+                RagdollUpdate();
+                break;
         }
     }
 
+    public void StartRagdoll()
+    {
+        currentState = State.ragdoll;
+        playerRagdoll.StartRagdoll();
+        playerCamera.SwitchToFollow();
+    }
+
+    public void EndRagdoll()
+    {
+        currentState = State.player;
+    }
+
+    public void StartCorrecting()
+    {
+        playerCamera.SwitchToImmobile();
+    }
     void ShootRivet()
     {
         if (rivetManagement)
@@ -52,6 +85,13 @@ public class Player : NetworkBehaviour
         }
     }
 
+    void RagdollUpdate()
+    {
+        if (playerRagdoll)
+        {
+            playerRagdoll.RagdollUpdate();
+        }
+    }
     void ClearRivets()
     {
         if (rivetManagement)

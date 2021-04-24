@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2030349273785125052}
   - component: {fileID: 2030349273785125054}
   - component: {fileID: 2030349273785125055}
+  - component: {fileID: 477971962896381961}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -83,6 +84,19 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030349273785125053}
   m_Enabled: 0
+--- !u!114 &477971962896381961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030349273785125053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3494350aa2bc3b14c94ae62a44a4c658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 2030349274404377042}
 --- !u!1 &2030349274404377042
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,6 +115,8 @@ GameObject:
   - component: {fileID: -853408529534556454}
   - component: {fileID: 7295178846619607733}
   - component: {fileID: 5354419951502502289}
+  - component: {fileID: 181376960331930474}
+  - component: {fileID: 8995328596168430854}
   m_Layer: 0
   m_Name: OnlinePlayer
   m_TagString: Player
@@ -290,3 +306,29 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 0}
   angularVelocity: {x: 0, y: 0, z: 0}
+--- !u!114 &181376960331930474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030349274404377042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8fb4d0c0f1be1646b392855b33f2e89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7295178846619607733}
+--- !u!114 &8995328596168430854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030349274404377042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2eb000b799b77d4e88013f6cff82a36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 477971962896381961}
