@@ -9,12 +9,14 @@ public class Player : NetworkBehaviour
     KeyCode clearRivets = KeyCode.R;
     PlayerMovement playerMovement;
     PlayerRagdoll playerRagdoll;
+    PlayerJumping playerJumping;
+    Rigidbody rb;
     PlayerCamera playerCamera;
 
     [SyncVar(hook = "NetworkEnabled")]
     public bool networkEnabled;
 
-    private enum State { player, ragdoll}
+    private enum State { player, ragdoll, jumping}
 
     private State currentState = State.player;
 
@@ -25,6 +27,8 @@ public class Player : NetworkBehaviour
         playerMovement = GetComponent<PlayerMovement>();
         playerRagdoll = GetComponent<PlayerRagdoll>();
         playerCamera = GetComponent<PlayerCamera>();
+        playerJumping = GetComponent<PlayerJumping>();
+        rb = GetComponent<Rigidbody>();
         if (!isLocalPlayer)
         {
             ClearNonPlayerComponents();
@@ -63,14 +67,21 @@ public class Player : NetworkBehaviour
 
     public void StartRagdoll()
     {
+        print("start ragdoll");
         currentState = State.ragdoll;
         playerRagdoll.StartRagdoll();
         playerCamera.SwitchToFollow();
     }
 
-    public void EndRagdoll()
+    public void SwitchToPlayer()
     {
         currentState = State.player;
+        playerJumping.SwitchToStandard();
+    }
+
+    public void SwitchToJumping()
+    {
+        currentState = State.jumping;
     }
 
     public void StartCorrecting()
@@ -137,12 +148,13 @@ public class Player : NetworkBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.rigidbody)
-        {
-            if ((collision.rigidbody.mass * collision.relativeVelocity).magnitude >= 100)
+        if (collision.rigidbody &&  Vector3.Dot(-transform.up, Vector3.Project(-transform.up, (transform.position - collision.contacts[0].point))) < 0 && (collision.rigidbody.mass * collision.relativeVelocity).magnitude >= 100)
             {
                 StartRagdoll();
             }
+        else if (currentState == State.jumping)
+        {
+            SwitchToPlayer();
         }
     }
 }

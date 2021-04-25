@@ -41,7 +41,6 @@ public class PlayerRagdoll : MonoBehaviour
 
     public void StartRagdoll()
     {
-        print("start ragdoll");
         ragdollTimer = 0;
         currentState = State.ragdoll;
         rb.constraints = RigidbodyConstraints.None;
@@ -57,6 +56,6 @@ public class PlayerRagdoll : MonoBehaviour
     public void EndRagdoll()
     {
         currentState = State.player;
-        player.EndRagdoll();
+        player.SwitchToPlayer();
     }
 }

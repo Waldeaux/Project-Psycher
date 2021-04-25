@@ -19,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
 
     public bool relativeVelocity;
 
-    private Vector3 gravity;
 
     public bool easeRecalibrate;
 
@@ -34,9 +33,6 @@ public class PlayerMovement : MonoBehaviour
     private PlayerState currentState = PlayerState.normal;
 
     private Quaternion targetCalibrationRotation;
-
-    private Vector3 jumpCastExtents = new Vector3(.5f, .1f, .5f);
-
 
     private Vector3 storedVelocity;
 
@@ -56,7 +52,6 @@ public class PlayerMovement : MonoBehaviour
         {
             recalibrateSpeed = 90;
         }
-        gravity = -transform.up;
     }
 
     public void ScrapperUpdate()
@@ -76,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(jumpKey))
         {
-            Jump();
+            //Jump();
         }
     }
 
@@ -84,8 +79,8 @@ public class PlayerMovement : MonoBehaviour
     {
         
         Vector3 planarMovement = (transform.forward * Input.GetAxis("Vertical") + transform.right * Input.GetAxis("Horizontal")) * speed;
-        Vector3 upMovement = Vector3.Project(rb.velocity, transform.up) - transform.up * 9.8f * Time.deltaTime;
-        rb.velocity = upMovement + planarMovement + gravity*9.8f * Time.deltaTime;
+        Vector3 upMovement = Vector3.Project(rb.velocity, transform.up);
+        rb.velocity = upMovement + planarMovement;
         rb.rotation *= Quaternion.AngleAxis(rotationSpeed * Input.GetAxis("Mouse X"), transform.InverseTransformDirection(transform.up));
 
         cam.transform.rotation *= Quaternion.AngleAxis(rotationSpeed * -Input.GetAxis("Mouse Y"), cam.transform.InverseTransformDirection(cam.transform.right));
@@ -112,22 +107,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void Jump()
-    {
-        print("jump");
-        if(Physics.BoxCast(transform.position, jumpCastExtents, -transform.up, transform.rotation, .9f))
-        {
-            print("jump successful");
-            Vector3 currentUp = Vector3.Project(rb.velocity, transform.up);
-            rb.AddForce(transform.up * (10 - currentUp.magnitude), ForceMode.VelocityChange);
-        }
-    }
     private void SwitchToNormal()
     {
         rb.velocity = storedVelocity;
         currentState = PlayerState.normal;
         playerCamera.SwitchToImmobile();
-        gravity = -transform.up;
         NormalMovement();
     }
 
@@ -140,6 +124,7 @@ public class PlayerMovement : MonoBehaviour
 
         currentState = PlayerState.recalibrate;
     }
+
     private void OneTimeRecalibrate()
     {
         if (!Input.GetKey(recalibrateKey))
@@ -202,5 +187,9 @@ public class PlayerMovement : MonoBehaviour
         cam.transform.localRotation = Quaternion.Euler(newX, 0, 0);
     }
 
+    private void SnapRotation()
+    {
+
+    }
     
 }
