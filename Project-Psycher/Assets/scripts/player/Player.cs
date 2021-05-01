@@ -10,13 +10,17 @@ public class Player : NetworkBehaviour
     PlayerMovement playerMovement;
     PlayerRagdoll playerRagdoll;
     PlayerJumping playerJumping;
+    PlayerUI playerUI;
     Rigidbody rb;
     PlayerCamera playerCamera;
+    GameControl gameControl;
+
+    int currentSpectatePlayer = 0;
 
     [SyncVar(hook = "NetworkEnabled")]
     public bool networkEnabled;
 
-    private enum State { player, ragdoll, jumping}
+    private enum State { player, ragdoll, jumping, dead}
 
     private State currentState = State.player;
 
@@ -28,7 +32,13 @@ public class Player : NetworkBehaviour
         playerRagdoll = GetComponent<PlayerRagdoll>();
         playerCamera = GetComponent<PlayerCamera>();
         playerJumping = GetComponent<PlayerJumping>();
+        playerUI = GetComponent<PlayerUI>();
         rb = GetComponent<Rigidbody>();
+        GameObject gameControlObject = GameObject.FindGameObjectWithTag("GameController");
+        if (gameControlObject)
+        {
+            gameControl = gameControlObject.GetComponent<GameControl>();
+        }
         if (!isLocalPlayer)
         {
             ClearNonPlayerComponents();
@@ -38,13 +48,13 @@ public class Player : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!networkEnabled || !hasAuthority)
+        {
+            return;
+        }
         switch (currentState)
         {
             case (State.player):
-                if (!networkEnabled || !hasAuthority)
-                {
-                    return;
-                }
                 if (playerMovement)
                 {
                     playerMovement.ScrapperUpdate();
@@ -61,6 +71,22 @@ public class Player : NetworkBehaviour
 
             case (State.ragdoll):
                 RagdollUpdate();
+                break;
+
+            case (State.dead):
+                if (gameControl)
+                {
+                    if (Input.GetKeyDown(KeyCode.RightArrow))
+                    {
+                        currentSpectatePlayer++;
+                        playerCamera.SwitchSpectate(gameControl.FindNextPlayer(ref currentSpectatePlayer));
+                    }
+                    else if (Input.GetKeyDown(KeyCode.LeftArrow))
+                    {
+                        currentSpectatePlayer--;
+                        playerCamera.SwitchSpectate(gameControl.FindNextPlayer(ref currentSpectatePlayer));
+                    }
+                }
                 break;
         }
     }
@@ -84,6 +110,25 @@ public class Player : NetworkBehaviour
         currentState = State.jumping;
     }
 
+    public void SwitchToDead()
+    {
+        currentState = State.dead;
+        rb.constraints = RigidbodyConstraints.None;
+        SwitchToCameraSpectate();
+    }
+
+    public void SwitchToCameraSpectate()
+    {
+        currentSpectatePlayer = 0;
+        playerCamera.SwitchToSpectate();
+        playerCamera.SwitchSpectate(gameControl.FindNextPlayer(ref currentSpectatePlayer));
+    }
+    public void SwitchToCameraSpectate(GameObject player)
+    {
+        currentSpectatePlayer = 0;
+        playerCamera.SwitchToSpectate();
+        playerCamera.SwitchSpectate(player);
+    }
     public void StartCorrecting()
     {
         playerCamera.SwitchToImmobile();
@@ -143,6 +188,10 @@ public class Player : NetworkBehaviour
         }
         Destroy(cam.gameObject);
         Destroy(playerMovement);
+        Destroy(playerJumping);
+        Destroy(playerCamera);
+        Destroy(playerUI);
+        Destroy(playerRagdoll);
         //Destroy(rivetManagement);
         Destroy(this);
     }
@@ -155,6 +204,15 @@ public class Player : NetworkBehaviour
         else if (currentState == State.jumping)
         {
             SwitchToPlayer();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("MapBoundary"))
+        {
+            other.GetComponent<MapBoundaries>().RemovePlayer(this.gameObject);
+            this.SwitchToDead();
         }
     }
 }

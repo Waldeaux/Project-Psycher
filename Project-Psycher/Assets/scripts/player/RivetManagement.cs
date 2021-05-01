@@ -10,16 +10,24 @@ public class RivetManagement : NetworkBehaviour
     bool shotRivet = false;
     public List<Rivet> activeRivets;
     public GameObject rivetRepresentative;
+    int rivetMax = 8;
+    PlayerUI playerUI;
     enum MobileResult
     {
         PreviousObject,
         CurrentObject,
         Neither
     };
+
+    private void Start()
+    {
+        playerUI = GetComponent<PlayerUI>();
+        UpdateRemainingRivets();
+    }
     public void ShootRivet(Vector3 direction, Vector3 position)
     {
         RaycastHit hitInfo;
-        if(Physics.Raycast(position, direction))
+        if(Physics.Raycast(position, direction) && (shotRivet || activeRivets.Count < rivetMax))
         {
             CmdCreateRivet(position, direction);
         }
@@ -53,6 +61,7 @@ public class RivetManagement : NetworkBehaviour
         {
             AttachRivetRepresentative(target, rivetRepresentative, prevRivet.representative);
             prevRivet = null;
+            UpdateRemainingRivets();
         }
         else
         {
@@ -80,6 +89,7 @@ public class RivetManagement : NetworkBehaviour
             }
         }
     }
+
     [ClientRpc]
     void AttachRivetRepresentative(GameObject target, GameObject rivet, GameObject pairedRepresentative)
     {
@@ -99,5 +109,11 @@ public class RivetManagement : NetworkBehaviour
         }
         shotRivet = false;
         activeRivets = new List<Rivet>();
+        UpdateRemainingRivets();
+    }
+
+    void UpdateRemainingRivets()
+    {
+        playerUI.UpdateRemainingRivets(rivetMax - activeRivets.Count);
     }
 }

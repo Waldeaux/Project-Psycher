@@ -25,7 +25,7 @@ public class ScrapperNetworkManager : NetworkManager
     public override void OnServerAddPlayer(NetworkConnection conn)
     {
         base.OnServerAddPlayer(conn);
-        print(conn.connectionId);
+        print("add player");
         NetworkPlayerTest newPlayer = conn.identity.gameObject.GetComponent<NetworkPlayerTest>();
         if (newPlayer != null)
         {
@@ -44,6 +44,8 @@ public class ScrapperNetworkManager : NetworkManager
         {
             lobby.AddUser(conn.connectionId);
         }
+        print(gameControl);
+        print(conn.identity.gameObject);
         if (gameControl)
         {
             gameControl.AddPlayer(conn.identity.gameObject);
@@ -54,6 +56,7 @@ public class ScrapperNetworkManager : NetworkManager
     {
         base.OnServerSceneChanged(sceneName);
         GameObject gameController = GameObject.FindGameObjectWithTag("GameController");
+        print("scene change");
         if (gameController)
         {
             gameControl = gameController.GetComponent<GameControl>();

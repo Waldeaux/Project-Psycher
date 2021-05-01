@@ -5,8 +5,9 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public GameObject target;
+    private Vector3 currentSpectateOffset;
 
-    private enum State { immobile, follow, stay, offset}
+    private enum State { immobile, follow, stay, offset, spectate}
     private State currentState = State.stay;
     private float rightAnglePeriod = .25f;
     void Start()
@@ -37,9 +38,32 @@ public class CameraFollow : MonoBehaviour
             case (State.offset):
                 SmoothTranslation(target.transform.position + target.transform.up *3, Quaternion.LookRotation(-target.transform.up, target.transform.forward));
                 break;
+            case (State.spectate):
+                transform.position = target.transform.position + currentSpectateOffset;
+                transform.LookAt(target.transform);
+                float angle = Vector3.Angle(currentSpectateOffset, Vector3.up);
+                float upwardMovement = Time.deltaTime * Input.GetAxis("Mouse Y") * 90;
+                upwardMovement = Mathf.Clamp(upwardMovement, angle - 90, angle - 10);
+                currentSpectateOffset = Quaternion.AngleAxis(Time.deltaTime * Input.GetAxis("Mouse X") * 90, Vector3.up) * currentSpectateOffset;
+                currentSpectateOffset = Quaternion.AngleAxis(upwardMovement, transform.right) * currentSpectateOffset;
+                float magnitude = currentSpectateOffset.magnitude;
+                magnitude -= Input.mouseScrollDelta.y;
+                magnitude = Mathf.Clamp(magnitude, 1, 10);
+                currentSpectateOffset = currentSpectateOffset.normalized * magnitude;
+                break;
         }
     }
 
+    public void SwitchToSpectate()
+    {
+        currentState = State.spectate;
+        transform.SetParent(null);
+    }
+    public void SwitchSpectate(GameObject player)
+    {
+        target = player;
+        currentSpectateOffset = player.transform.forward*5;
+    }
     public void SwitchToFollow()
     {
         transform.SetParent(null);

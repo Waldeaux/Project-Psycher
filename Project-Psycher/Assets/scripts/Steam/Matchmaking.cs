@@ -61,7 +61,7 @@ public class Matchmaking : MonoBehaviour
     {
         if (SteamManager.Initialized)
         {
-            SteamMatchmaking.CreateLobby(ELobbyType.k_ELobbyTypeFriendsOnly, 2);
+            SteamMatchmaking.CreateLobby(ELobbyType.k_ELobbyTypeFriendsOnly, 4);
         }
         else
         {

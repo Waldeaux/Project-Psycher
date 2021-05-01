@@ -14,6 +14,7 @@ public class ObjectAttachment : MonoBehaviour
         Vector3 relativeOffset = transform.TransformVector(offset);
         if(debug)
         {
+            print(gameObject.name);
             print(relativeOffset);
             GameObject testCube = GameObject.Instantiate(spotIndicator);
             testCube.transform.position = transform.position + relativeOffset + transform.up * .05f + -transform.up * .1f;
@@ -41,7 +42,6 @@ public class ObjectAttachment : MonoBehaviour
 
     private void OnJointBreak(float breakForce)
     {
-        print(breakForce);
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb)
         {

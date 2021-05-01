@@ -121,6 +121,11 @@ public class PlayerJumping : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        Destroy(indicator);
+    }
+
     private void Correction()
     {
         transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(indicator.transform.forward, indicator.transform.up), Time.deltaTime * 180);

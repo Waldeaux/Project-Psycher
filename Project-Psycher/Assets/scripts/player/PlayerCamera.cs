@@ -20,4 +20,14 @@ public class PlayerCamera : MonoBehaviour
     {
         camera.SwitchToOffset();
     }
+
+    public void SwitchToSpectate()
+    {
+        camera.SwitchToSpectate();
+    }
+
+    public void SwitchSpectate(GameObject target)
+    {
+        camera.SwitchSpectate(target);
+    }
 }
